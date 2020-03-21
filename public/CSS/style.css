@@ -1,0 +1,149 @@
+/*style principal du site (page main)*/
+* {
+    font-family: Avenir, sans-serif;
+
+}
+
+h1
+{
+    text-align: center;
+    margin-bottom: 10%;
+}
+h3
+{
+
+    margin-bottom: 5%;
+}
+
+a #logo {
+    margin-top: 2%;
+    width: 10em;
+}
+
+#top
+{
+    display: flex;
+    width: 100%;
+    margin-bottom : 2%;
+
+}
+
+section
+{
+    margin: 5%;
+    margin-top : 0%;
+
+}
+
+article{
+    margin-bottom: 5%;
+    margin-left: 5%;
+    text-align: justify;
+}
+
+
+nav{
+    width: 100%;
+    margin-top: 2%;
+    font-size: 1.5vw;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-bottom: 3.1%;
+    border-bottom: gray solid 0.1em;
+    background-color: white;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 2%;
+}
+
+nav ul li{
+    float: left;
+    width: max-content;
+    text-align: center;
+    margin-right: 5%;
+
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover{
+    color: #e4a3ff;
+    border-bottom: 2px solid #fa6dff;
+}
+
+header
+{
+    background-color: white;
+}
+
+
+.connect /*Bouton de connecter placé à droite de la page*/
+{
+    position: absolute;
+    right: 2.5%;
+    width: max-content;
+    vertical-align: center;
+}
+
+#logoMoncompte
+{
+    width: 1em;
+    vertical-align: center;
+    padding-right: 1em;
+}
+
+.formule1{/*image formule 1 style main*/
+    width: 100%;
+}
+
+.remonter /*image permettant de remonter en haut de la page*/
+{
+    width: 3%;
+    height: 3%;
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+}
+
+figure
+{
+    text-align: center;
+}
+
+footer
+{
+    border-top: solid gray 0.1em;
+    margin-left: 3%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.socialLogo
+{
+    width: 35px;
+    padding-right: 3%;
+    margin-left: 10%;
+}
+
+#footer_link{
+  margin-top: 2%;
+  width: max-content;
+}
+
+
+.info
+{
+    position: absolute;
+    left: 20%;
+}

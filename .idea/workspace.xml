@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="APP_INFO" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
+  <component name="ProjectId" id="1ZLHjCkSA7VlkmM0OuJljc3ntGd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/CSS" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MAMP" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:APP_INFO" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:APP_INFO" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5d7696d6" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="" />
+      <created>1584611586934</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584611586934</updated>
+      <workItem from="1584611590368" duration="784000" />
+      <workItem from="1584612631383" duration="73000" />
+      <workItem from="1584612716728" duration="159000" />
+      <workItem from="1584612893893" duration="3015000" />
+      <workItem from="1584709235565" duration="17069000" />
+      <workItem from="1584737534418" duration="89000" />
+      <workItem from="1584737776889" duration="471000" />
+      <workItem from="1584778535233" duration="5307000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="321" y="123" key="#CLI_Interpreters" timestamp="1584613615785">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="321" y="123" key="#CLI_Interpreters/0.23.1440.877@0.23.1440.877" timestamp="1584613615785" />
+    <state x="396" y="23" width="673" height="876" key="#PHP" timestamp="1584613621878">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="396" y="23" width="673" height="876" key="#PHP/0.23.1440.877@0.23.1440.877" timestamp="1584613621878" />
+    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584616565104">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584616565104" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1584613691021" />
+    <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584710034353">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1584710034353" />
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom" timestamp="1584736990055">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
+    <state width="1398" height="114" key="GridCell.Tab.0.center" timestamp="1584736990054">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="114" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584647858846" />
+    <state width="1398" height="114" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584736990054" />
+    <state width="1398" height="114" key="GridCell.Tab.0.left" timestamp="1584736990054">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="114" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584647858845" />
+    <state width="1398" height="114" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584736990054" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right" timestamp="1584736990055">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="114" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1584778618815">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1584778618815" />
+    <state x="540" y="23" width="900" height="877" key="SettingsEditor" timestamp="1584709404083">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="540" y="23" width="900" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1584709404083" />
+  </component>
+</project>
