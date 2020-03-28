@@ -1,7 +1,6 @@
 /*style principal du site (page main)*/
 * {
     font-family: Avenir, sans-serif;
-
 }
 
 h1
@@ -16,7 +15,8 @@ h2{
 }
 h3
 {
-
+    color: #ff4a4d;
+    border-bottom: solid #ff4a4d;
     margin-bottom: 5%;
 }
 
@@ -98,13 +98,14 @@ header
     position: absolute;
     right: 2.5%;
     width: max-content;
-    vertical-align: center;
+    vertical-align: auto;
 }
 
 #logoMoncompte
 {
     width: 1em;
-    vertical-align: center;
+    height: 1.1em;
+    vertical-align: auto;
     padding-right: 1em;
 }
 
