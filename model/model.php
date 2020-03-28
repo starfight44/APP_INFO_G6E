@@ -34,7 +34,6 @@ function getUserInfos($ID){
 function setUserInfos($pseudo,$nom,$prenom,$email,$mot_de_passe,$taille,$poids,$sexe,$pays){
     $bdd = bddConnect();
 
-
     $requete = $bdd->prepare('INSERT INTO utilisateurs(pseudo,nom,prenom,email,mot_de_passe,taille,poids,sexe,pays,date_inscription) VALUES(:pseudo,:nom,:prenom,:email,:mot_de_passe,:taille,:poids,:sexe,:pays,NOW())');
     $requete->execute(array(
         'pseudo' => $pseudo,
