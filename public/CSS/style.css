@@ -8,6 +8,11 @@ h1
 {
     text-align: center;
     margin-bottom: 10%;
+
+}
+h2{
+    color: #ff4a4d;
+    border-bottom: solid #ff4a4d;
 }
 h3
 {
@@ -20,7 +25,7 @@ a #logo {
     width: 10em;
 }
 
-#top
+#top /*Partie correspondant au header */
 {
     display: flex;
     width: 100%;
@@ -51,12 +56,14 @@ nav{
 nav ul{
     list-style-type: none;
     padding-bottom: 3.1%;
-    border-bottom: gray solid 0.1em;
+    border-bottom: #a5a5a5 solid 0.01em;
     background-color: white;
 
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 2%;
+
+
 }
 
 nav ul li{
@@ -64,6 +71,7 @@ nav ul li{
     width: max-content;
     text-align: center;
     margin-right: 5%;
+
 
 }
 
@@ -75,8 +83,8 @@ nav a{
 }
 
 nav a:hover{
-    color: #e4a3ff;
-    border-bottom: 2px solid #fa6dff;
+    color: #ff707f;
+    border-bottom: 1px solid #ff4a4d;
 }
 
 header
@@ -100,7 +108,7 @@ header
     padding-right: 1em;
 }
 
-.formule1{/*image formule 1 style main*/
+.bannerImage{/**/
     width: 100%;
 }
 
@@ -113,14 +121,10 @@ header
     bottom: 2%;
 }
 
-figure
-{
-    text-align: center;
-}
 
 footer
 {
-    border-top: solid gray 0.1em;
+    border-top: #a5a5a5 solid 0.01em;
     margin-left: 3%;
     margin-right: 5%;
     margin-bottom: 3%;
@@ -137,8 +141,8 @@ footer
 }
 
 #footer_link{
-  margin-top: 2%;
-  width: max-content;
+    margin-top: 2%;
+    width: max-content;
 }
 
 
@@ -146,4 +150,16 @@ footer
 {
     position: absolute;
     left: 20%;
+}
+
+#questionArticle .question{
+    font-style: italic;
+    color: #ff7689;
+    width: max-content;
+}
+
+#questionArticle .reponse{
+    margin-left: 5%;
+    margin-bottom: 4%;
+    margin-top: 2%;
 }

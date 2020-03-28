@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/visitorAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/visitorAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/CSS/formulaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/formulaire.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/homeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/homeView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +109,9 @@
       <workItem from="1584778535233" duration="6069000" />
       <workItem from="1585169595972" duration="20000" />
       <workItem from="1585312793437" duration="239000" />
-      <workItem from="1585395145693" duration="151000" />
+      <workItem from="1585395145693" duration="535000" />
+      <workItem from="1585409239814" duration="33000" />
+      <workItem from="1585409307426" duration="3583000" />
     </task>
     <servers />
   </component>
@@ -130,6 +136,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1584710034353" />
+    <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585409255400">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1585409255400" />
     <state width="1398" height="114" key="GridCell.Tab.0.bottom" timestamp="1584736990055">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

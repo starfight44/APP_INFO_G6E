@@ -53,9 +53,13 @@ function connect(){
 }
 
 function register(){
-    if(!isset($_POST['pseudo']) OR $_POST['password'] != $_POST['confirmPassword'] OR strlen($_POST['password']) !=  strlen($_POST['confirmPassword'])){
-        $warning_message='Il y a eu une erreur, réessayez';
+    if(!isset($_POST['pseudo'])){
         require('view/registerView.php');
+    }
+    elseif ($_POST['password'] != $_POST['confirmPassword'] OR strlen($_POST['password']) !=  strlen($_POST['confirmPassword'])){
+        $warning_message='Saisie invalide dans "confirmer le mot de passe"';
+        require('view/registerView.php');
+
     }
     else {
         require('model/model.php');
