@@ -1,9 +1,15 @@
 /*style des pages avec formulaires (connexion, inscription, contact)*/
-body{
+@media all and (min-width: 900px)
+{
+    body
+    {
+        background-image:url(formBackground.png);
+    }
+}
+    body{
     font-family: Avenir, sans-serif;
-    background-color: rgba(155,160,175,0.09);
 
-    background-image:url(formBackground.png);
+
     background-repeat:no-repeat;
     background-position:center;
     background-size:100%;
@@ -38,8 +44,9 @@ body{
 #connection_container{
 
     width:400px;
-    margin-top: 16em;
-    margin-right: 60%;
+    margin-right: 10em;
+    margin-bottom: 2em;
+    margin-top: 10em;
 
 }
 
@@ -81,7 +88,7 @@ input[type=text], input[type=password] ,input[type=number], select, input[type=e
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #5689af;
+    background-color: #ff4a4d;
     color: white;
     padding: 14px 20px;
     margin: 10px 0;
@@ -94,8 +101,8 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: white;
-    color: #4970ff;
-    border: 1px solid #4970ff;
+    color: #ff707f;
+    border: 1px solid #ff4a4d;
 }
 
 a

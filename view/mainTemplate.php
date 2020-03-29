@@ -10,8 +10,8 @@
 <header>
 
     <div id ="top">
-        <a href="index.php">
-            <img src="public/images/Infinite_measures.gif" alt="logo" id = "logo"/>
+        <a href="index.php" class="logoLink">
+            <img src="public/images/Infinite_measures.gif" alt="logoImage" class="logoImage" width="150em"/>
         </a>
         <?= $nav ?>
     </div>

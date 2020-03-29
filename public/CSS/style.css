@@ -3,6 +3,9 @@
     font-family: Avenir, sans-serif;
 }
 
+h1,h2,h3{
+    color: #ff4a4d;
+}
 h1
 {
     text-align: center;
@@ -10,19 +13,22 @@ h1
 
 }
 h2{
-    color: #ff4a4d;
     border-bottom: solid #ff4a4d;
 }
 h3
 {
-    color: #ff4a4d;
     border-bottom: solid #ff4a4d;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 }
 
-a #logo {
+.logoLink {
     margin-top: 2%;
-    width: 10em;
+    width: 15%;
+}
+
+.logoImage
+{
+    width: 100%;
 }
 
 #top /*Partie correspondant au header */
@@ -56,7 +62,7 @@ nav{
 nav ul{
     list-style-type: none;
     padding-bottom: 3.1%;
-    border-bottom: #a5a5a5 solid 0.01em;
+    border-bottom: #ff4a4d solid 0.05em;
     background-color: white;
 
     position: -webkit-sticky; /* Safari */
@@ -125,7 +131,7 @@ header
 
 footer
 {
-    border-top: #a5a5a5 solid 0.01em;
+    border-top: #ff4a4d solid 0.05em;
     margin-left: 3%;
     margin-right: 5%;
     margin-bottom: 3%;
