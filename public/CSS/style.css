@@ -23,7 +23,7 @@ h3
 
 .logoLink {
     margin-top: 2%;
-    width: 15%;
+    width: 13%;
 }
 
 .logoImage
@@ -62,7 +62,7 @@ nav{
 nav ul{
     list-style-type: none;
     padding-bottom: 3.1%;
-    border-bottom: #ff4a4d solid 0.05em;
+    border-bottom: #ff4a4d solid 0.01em;
     background-color: white;
 
     position: -webkit-sticky; /* Safari */
@@ -169,4 +169,23 @@ footer
     margin-left: 5%;
     margin-bottom: 4%;
     margin-top: 2%;
+}
+
+input[type=button] {
+    background-color: #ff4a4d;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: max-content;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 2%;
+
+}
+
+input[type=button]:hover {
+    background-color: white;
+    color: #ff707f;
+    border: 1px solid #ff4a4d;
 }

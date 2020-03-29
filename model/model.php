@@ -26,7 +26,7 @@ function getUserConnectionInfos($pseudo){
 function getUserInfos($ID){
     $bdd = bddConnect();
 
-    $requete = $bdd->prepare('SELECT pseudo Pseudo,nom Nom ,prenom Prénom,email eMail,taille Taille,poids Poids,sexe Sexe,pays Pays FROM utilisateurs WHERE id=?');
+    $requete = $bdd->prepare('SELECT pseudo Pseudo,nom Nom ,prenom Prénom,email Mail,taille Taille,poids Poids,sexe Sexe,pays Pays FROM utilisateurs WHERE id=?');
     $requete->execute(array($ID));
     return $requete->fetch(PDO::FETCH_ASSOC);;
 }
@@ -40,10 +40,32 @@ function setUserInfos($pseudo,$nom,$prenom,$email,$mot_de_passe,$taille,$poids,$
         'nom' => $nom,
         'prenom' => $prenom,
         'email' => $email,
-        'mot_de_passe' => password_hash($mot_de_passe, PASSWORD_DEFAULT),
+        'mot_de_passe' => password_hash ($mot_de_passe,PASSWORD_DEFAULT),
         'taille' => $taille,
         'poids' => $poids,
         'sexe' => $sexe,
         'pays' => $pays,
     ));
+}
+
+function updateUserInfos($pseudo,$nom,$prenom,$email,$taille,$poids,$userID){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare(' UPDATE utilisateurs SET pseudo=:pseudo,nom=:nom,prenom=:prenom ,email=:email,taille=:taille,poids=:poids WHERE ID=:ID');
+    $requete->execute(array(
+        'pseudo' => $pseudo,
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'email' => $email,
+        'taille' => $taille,
+        'poids' => $poids,
+        'ID' => $userID,
+    ));
+}
+
+function updatePassword($newPassword,$userID){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare(' UPDATE utilisateurs SET mot_de_passe= :password WHERE ID= :ID');
+    $requete->execute(array(
+        'password' => password_hash ($newPassword,PASSWORD_DEFAULT),
+        'ID' => $userID));
 }

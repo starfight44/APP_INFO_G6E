@@ -28,7 +28,7 @@ if (isset($_GET['action'])) {
         userSpace();
     }
     elseif ($_GET['action'] == 'userInformations') {
-        userInformations();
+        printUserInformations();
     }
     elseif ($_GET['action'] == 'makeATest') {
         makeATest();
@@ -39,6 +39,10 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'userHistoric') {
         userHistoric();
     }
+    elseif ($_GET['action'] == 'modifyUserInformations') {
+        modifyUserInformations();
+    }
+
 
 }
 else {

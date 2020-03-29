@@ -38,7 +38,7 @@ function connect(){
 
         $donnees = getUserConnectionInfos($_POST['pseudo']);
 
-        if(isset($donnees['pseudo']) AND password_verify($_POST['password'], $donnees['mot_de_passe'])) {
+        if(isset($donnees['pseudo']) AND password_verify($_POST['password'],$donnees['mot_de_passe'])) {
             $_SESSION['ID'] = $donnees['ID'];
             $_SESSION['pseudo'] = $donnees['pseudo'];
             $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur '. $_SESSION['pseudo'].' ! </strong></section>';
