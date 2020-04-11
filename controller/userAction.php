@@ -107,5 +107,4 @@ function logout(){
     $_SESSION = array();
     // On détruit la session
     session_destroy();
-    require('view/homeView.php');
 }
