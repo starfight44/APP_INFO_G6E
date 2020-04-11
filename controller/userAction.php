@@ -2,22 +2,19 @@
 
 function printUserInformations(){
     if(isLoginOk()){
-        require('model/model.php');
+        require('model/modelUser.php');
         $donnees = getUserInfos($_SESSION['ID']);
-
         ob_start();
-        echo '<section>';
-        echo '<h3>Mes informations : </h3>';
+        echo '<section>
+               <h3>Mes informations : </h3>
+               <article>
+               <a href="index.php?action=modifyUserInformations"><input type="button" value="Modifier mes informations"> </a>';
 
-        echo '<article>';
-        echo '<a href="index.php?action=modifyUserInformations"><input type="button" value="Modifier mes informations"> </a>';
         foreach($donnees as $key => $value) {
             echo '<p><strong>' . $key . ' : </strong><span class="info">'. $value . '</span></p>';
         }
-
-        echo '</article>';
-
-        echo '</section>';
+        echo '</article>
+</section>';
         $content = ob_get_clean();
         require('view/userSpaceView.php');
     }
@@ -29,17 +26,20 @@ function printUserInformations(){
 
 function modifyUserInformations(){
     if(isLoginOk()){
-        require('model/model.php');
+        require('model/modelUser.php');
         $connectionDatas = getUserConnectionInfos($_SESSION['pseudo']);
         $userDatas = getUserInfos($_SESSION['ID']);
-        if(isset($_POST['pseudo'])) {
-            if (password_verify($_POST['password'],$connectionDatas['mot_de_passe'])) {
-                if(strlen($_POST['newPassword']) > 0){
-                    updatePassword($_POST['newPassword'],$connectionDatas['ID']);
-                }
-                updateUserInfos($_POST['pseudo'], $_POST['lastName'], $_POST['firstName'], $_POST['email'], $_POST['height'], $_POST['weight'],$connectionDatas['ID']);
-                $warning_message = 'modifications réussies, reconnectez vous !';
-                require('view/connectView.php');
+
+        if(isset($_POST['password'])) {
+            if (password_verify($_POST['password'],$connectionDatas['password'])) {
+
+                    if (strlen($_POST['newPassword']) > 0) {
+                        updatePassword($_POST['newPassword'], $connectionDatas['ID']);
+                    }
+
+                    updateUserInfos($_POST['lastName'], $_POST['firstName'], $_POST['height'], $_POST['weight'], $connectionDatas['ID']);
+                    $warning_message = 'modifications réussies, reconnectez vous !';
+                    require('view/connectView.php');
 
             } else {
                 $warning_message = 'Echec, mot de passe incorrect, réessayez';
@@ -49,12 +49,15 @@ function modifyUserInformations(){
         else{
             require('view/modifyUserInformationsView.php');
         }
+
     }
     else{
         $warning_message = 'Reconnectez vous';
         require('view/connectView.php');
     }
 }
+
+
 
 function userResults(){
     if(isLoginOk()){
@@ -76,7 +79,7 @@ function makeATest(){
     }
 }
 
-function userHistoric(){
+function userHistory(){
     if(isLoginOk()){
 
     }

@@ -67,6 +67,8 @@ function updatePassword($newPassword,$userID){
         'ID' => $userID));
 }
 
+
+
 function isUserInDatabase($pseudo,$email){
     $bdd = bddConnect();
     $requete = $bdd->prepare('SELECT COUNT(*) AS nbr FROM users WHERE pseudo = :pseudo OR email = :email');

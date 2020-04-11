@@ -34,11 +34,11 @@ function connect(){
         require('view/connectView.php');
     }
     else{
-        require('model/model.php');
+        require('model/modelUser.php');
 
         $donnees = getUserConnectionInfos($_POST['pseudo']);
 
-        if(isset($donnees['pseudo']) AND password_verify($_POST['password'],$donnees['mot_de_passe'])) {
+        if(isset($donnees['pseudo']) AND password_verify($_POST['password'],$donnees['password'])) {
             $_SESSION['ID'] = $donnees['ID'];
             $_SESSION['pseudo'] = $donnees['pseudo'];
             $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur '. $_SESSION['pseudo'].' ! </strong></section>';
@@ -62,12 +62,16 @@ function register(){
 
     }
     else {
-        require('model/model.php');
-
-        setUserInfos($_POST['pseudo'],$_POST['lastName'],$_POST['firstName'],$_POST['email'],$_POST['password'],$_POST['height'],$_POST['weight'],$_POST['sex'],$_POST['country']);
-
-        $warning_message='inscription réalisée avec succès veuillez vous connecter';
-        require('view/connectView.php');
+        require('model/modelUser.php');
+        if(isUserInDatabase(strtolower($_POST['pseudo']),strtolower($_POST['email']))){
+            $warning_message='Pseudo ou email déjà utilisé !';
+            require('view/registerView.php');
+        }
+        else {
+            setUserInfos($_POST['pseudo'], $_POST['lastName'], $_POST['firstName'], $_POST['email'], $_POST['password'], $_POST['height'], $_POST['weight'], $_POST['sex'], $_POST['country']);
+            $warning_message = 'inscription réalisée avec succès veuillez vous connecter';
+            require('view/connectView.php');
+        }
     }
 }
 

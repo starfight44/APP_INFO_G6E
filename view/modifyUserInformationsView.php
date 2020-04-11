@@ -8,17 +8,11 @@
 
             <h1>Modifier mes informations : </h1>
 
-            <label><b>Pseudo</b></label>
-            <input type="text" placeholder="Entrer un pseudo" name="pseudo" value="<?= $userDatas['Pseudo'] ?>" required>
-
             <label><b>Nom</b></label>
             <input type="text" placeholder="Entrer le nom" name="lastName" value="<?= $userDatas['Nom'] ?>" required>
 
             <label><b>Prenom</b></label>
             <input type="text" placeholder="Entrer le prenom" name="firstName" value="<?= $userDatas['Prénom'] ?>" required>
-
-            <label><b>E-Mail</b></label>
-            <input type="text" placeholder="Entrer l'adresse mail" name="email" value="<?= $userDatas['Mail'] ?>" required>
 
             <label><b>Taille</b></label>
             <input type="number" placeholder="taille en cm" name="height" value="<?= $userDatas['Taille']?>" required>

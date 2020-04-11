@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f2343bf-dcc6-4f7b-b1e3-7db419a9df26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8f2343bf-dcc6-4f7b-b1e3-7db419a9df26.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/visitorAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/visitorAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/modifyUserInformationsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/modifyUserInformationsView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +36,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="APP_INFO" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -61,13 +62,22 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/view" />
+      <recent name="$PROJECT_DIR$/view/templates" />
       <recent name="$PROJECT_DIR$/public/CSS" />
     </key>
   </component>
@@ -81,17 +91,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:APP_INFO" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:APP_INFO" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5d7696d6" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -125,6 +125,19 @@
       <workItem from="1585417448834" duration="341000" />
       <workItem from="1585477173356" duration="11369000" />
       <workItem from="1585492574117" duration="4557000" />
+      <workItem from="1585553016277" duration="3406000" />
+      <workItem from="1585657905676" duration="77000" />
+      <workItem from="1585679971564" duration="3862000" />
+      <workItem from="1585751660041" duration="393000" />
+      <workItem from="1585752115813" duration="179000" />
+      <workItem from="1585752313138" duration="148000" />
+      <workItem from="1585752480734" duration="312000" />
+      <workItem from="1585752849872" duration="451000" />
+      <workItem from="1585753320921" duration="4082000" />
+      <workItem from="1585834331527" duration="8000" />
+      <workItem from="1586527780377" duration="10000" />
+      <workItem from="1586528605861" duration="71000" />
+      <workItem from="1586606535828" duration="3737000" />
     </task>
     <servers />
   </component>
@@ -140,11 +153,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="396" y="23" width="673" height="876" key="#PHP/0.23.1440.877@0.23.1440.877" timestamp="1584613621878" />
-    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584616565104">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585555556990">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584616565104" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1584613691021" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1585555556990" />
     <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584710034353">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -153,6 +166,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1585409255400" />
+    <state x="258" y="123" key="DBNavigator.ProjectSettingsDialog" timestamp="1585753212524">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="258" y="123" key="DBNavigator.ProjectSettingsDialog/0.23.1440.877@0.23.1440.877" timestamp="1585753212524" />
+    <state width="250" height="195" key="DatabaseViewActions_Filter" timestamp="1585753225122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="250" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1585753225122" />
     <state width="1398" height="114" key="GridCell.Tab.0.bottom" timestamp="1584736990055">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -173,13 +194,18 @@
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
     <state width="1398" height="114" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1585486484649">
+    <state width="239" height="539" key="HiddenNamespacesPopup" timestamp="1585554535445">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1585486484649" />
-    <state x="540" y="23" width="900" height="877" key="SettingsEditor" timestamp="1584709404083">
+    <state width="239" height="539" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1585554535445" />
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1585761952070">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="540" y="23" width="900" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1584709404083" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1585761952070" />
+    <state x="79" y="23" width="900" height="877" key="SettingsEditor" timestamp="1586609763230">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="79" y="23" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586609763230" />
+    <state x="79" y="23" width="900" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1585753745938" />
   </component>
 </project>

@@ -62,7 +62,7 @@ nav{
 nav ul{
     list-style-type: none;
     padding-bottom: 3.1%;
-    border-bottom: #ff4a4d solid 0.01em;
+    border-bottom: #ff4a4d solid 0.1em;
     background-color: white;
 
     position: -webkit-sticky; /* Safari */
@@ -131,7 +131,7 @@ header
 
 footer
 {
-    border-top: #ff4a4d solid 0.05em;
+    border-top: #ff4a4d solid 0.1em;
     margin-left: 3%;
     margin-right: 5%;
     margin-bottom: 3%;
