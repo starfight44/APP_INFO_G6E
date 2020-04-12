@@ -153,12 +153,6 @@ footer
 }
 
 
-.info
-{
-    position: absolute;
-    left: 20%;
-}
-
 #questionArticle .question{
     font-style: italic;
     color: #ff7689;
@@ -188,4 +182,13 @@ input[type=button]:hover {
     background-color: white;
     color: #ff707f;
     border: 1px solid #ff4a4d;
+}
+
+
+table
+{
+}
+td, th
+{
+    padding: 15px;
 }

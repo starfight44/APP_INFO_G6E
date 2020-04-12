@@ -59,6 +59,5 @@ if (isset($_GET['action'])) {
 
 }
 else {
-    logout(); //on s'assure que l'utilisateur est deconnecté pour plus de sécurité !!
     mainPage();
 }

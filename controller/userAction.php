@@ -8,13 +8,17 @@ function printUserInformations(){
         echo '<section>
                <h3>Mes informations : </h3>
                <article>
-               <a href="index.php?action=modifyUserInformations"><input type="button" value="Modifier mes informations"> </a>';
+               <a href="index.php?action=modifyUserInformations"><input type="button" value="Modifier mes informations"> </a>
+               <table>';
 
         foreach($donnees as $key => $value) {
-            echo '<p><strong>' . $key . ' : </strong><span class="info">'. $value . '</span></p>';
+            echo '<tr>
+                    <th>' . $key . ' : </th><td>' . $value .'</td>
+                    </tr>';
         }
-        echo '</article>
-</section>';
+        echo '</table>
+                </article>
+                </section>';
         $content = ob_get_clean();
         require('view/userSpaceView.php');
     }
@@ -107,4 +111,5 @@ function logout(){
     $_SESSION = array();
     // On détruit la session
     session_destroy();
+    require('view/homeView.php');
 }

@@ -20,3 +20,12 @@ function getManagerConnectionInfos($email){
 
     return $requete->fetch();
 }
+
+
+function getUsersList(){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email,height,weight,sex,country,registration_date FROM users');
+    $requete->execute();
+
+    return $requete->fetchAll(PDO::FETCH_ASSOC);
+}
