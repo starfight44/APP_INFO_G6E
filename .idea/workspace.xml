@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8f2343bf-dcc6-4f7b-b1e3-7db419a9df26.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8f2343bf-dcc6-4f7b-b1e3-7db419a9df26.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/visitorAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/visitorAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/mainTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mainTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/userSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/userSpaceView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerSpaceView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +46,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1ZLHjCkSA7VlkmM0OuJljc3ntGd" />
@@ -73,7 +82,7 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -141,6 +150,13 @@
       <workItem from="1586606535828" duration="6471000" />
       <workItem from="1586614245833" duration="983000" />
       <workItem from="1586679353913" duration="5141000" />
+      <workItem from="1586693808574" duration="18000" />
+      <workItem from="1586694228476" duration="130000" />
+      <workItem from="1586792757400" duration="7577000" />
+      <workItem from="1586867740601" duration="2328000" />
+      <workItem from="1586883979863" duration="2000" />
+      <workItem from="1586887566767" duration="2598000" />
+      <workItem from="1586933476457" duration="2671000" />
     </task>
     <servers />
   </component>
@@ -156,11 +172,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="396" y="23" width="673" height="876" key="#PHP/0.23.1440.877@0.23.1440.877" timestamp="1584613621878" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585555556990">
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586937699609">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584616565104" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1585555556990" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1586937699609" />
     <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584710034353">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -170,14 +186,18 @@
     </state>
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586614223437" />
     <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1585409255400" />
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586796766409">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1586796766409" />
     <state x="258" y="123" key="DBNavigator.ProjectSettingsDialog" timestamp="1585753212524">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="258" y="123" key="DBNavigator.ProjectSettingsDialog/0.23.1440.877@0.23.1440.877" timestamp="1585753212524" />
-    <state width="250" height="195" key="DatabaseViewActions_Filter" timestamp="1585753225122">
+    <state width="250" height="195" key="DatabaseViewActions_Filter" timestamp="1586937709014">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="250" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1585753225122" />
+    <state width="250" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1586937709014" />
     <state width="958" height="162" key="GridCell.Tab.0.bottom" timestamp="1586615150099">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -206,14 +226,16 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="239" height="539" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1585554535445" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1585761952070">
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1586935771843">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1585761952070" />
-    <state x="79" y="23" width="900" height="877" key="SettingsEditor" timestamp="1586609763230">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586935771843" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1586798290988" />
+    <state x="1532" y="-127" width="900" height="877" key="SettingsEditor" timestamp="1586870371418">
+      <screen x="1440" y="-127" width="1680" height="1027" />
     </state>
     <state x="79" y="23" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586609763230" />
+    <state x="1532" y="-127" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@1440.-127.1680.1027" timestamp="1586870371418" />
     <state x="79" y="23" width="900" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1585753745938" />
   </component>
 </project>

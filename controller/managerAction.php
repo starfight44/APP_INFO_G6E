@@ -27,22 +27,6 @@ function printUsers(){
         require('model/modelManager.php');
         $donnees = getUsersList();
         ob_start();
-        echo '<section>
-                   <h3>liste des utilisateurs</h3>
-                   <article>
-                   <table>
-                           <tr>
-                               <th>ID</th>
-                               <th>Pseudo</th>
-                               <th>Prénom</th>
-                               <th>Nom</th>
-                               <th>Email</th>
-                               <th>Taille</th>
-                               <th>Poids</th>
-                               <th>Sexe</th>
-                               <th>Pays</th>
-                               <th>Date d\'inscritpion</th>
-                           </tr>';
         foreach($donnees as $elt) {
             echo '<tr>
                     <td>' . $elt['ID'] .'</td> 
@@ -57,12 +41,8 @@ function printUsers(){
                     <td>'. $elt['registration_date'] . '</td>
                  </tr>';
         }
-
-        echo '</table>
-                </article>
-                </section>';
-        $content = ob_get_clean();
-        require('view/managerSpaceView.php');
+        $listUsers = ob_get_clean();
+        require('view/managerListUsersView.php');
     }
     else{
             $warning_message = 'Reconnectez vous';
@@ -70,6 +50,61 @@ function printUsers(){
         }
 }
 
+function searchUser(){
+    if(isManagerLog()) {
+        require('model/modelUser.php');
+        $donnees = getUserInfos($_POST['id']);
+        if(isset($donnees['Pseudo'])){
+            ob_start();
+            foreach($donnees as $key => $value) {
+                echo '<td>'. $value .'</td>';
+            }
+            $userInformations = ob_get_clean();
+
+            $_SESSION['idUser'] = $_POST['id'];
+            require('view/managerModifyUserView.php');
+        }
+        else{
+            $warning_message=urlencode('utilisateur introuvable, veuillez saisir un id valide');
+            $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
+            header($url);
+        }
+
+    }
+    else{
+            $warning_message = 'Reconnectez vous';
+            require('view/managerConnectView.php');
+        }
+    }
+
+function deleteUserAccount(){
+    if(isManagerLog()) {
+        require("model/modelManager.php");
+        deleteAccount($_SESSION['idUser']);
+        $warning_message=urlencode('Profil supprimé avec succès');
+        $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
+        header($url);
+    }
+else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function resetUserPassword(){
+    if(isManagerLog()) {
+        require("model/modelManager.php");
+        $newPassword = 'infinitemeasures'. $_SESSION['idUser'];
+        $newPassword = password_hash($newPassword,PASSWORD_DEFAULT);
+        resetPassword($_SESSION['idUser'],$newPassword);
+        $warning_message=urlencode('mot de passe réinitialisé avec succès');
+        $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
+        header($url);
+    }else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
 
 function isManagerLog(){
     session_start();

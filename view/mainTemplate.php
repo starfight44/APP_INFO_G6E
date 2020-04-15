@@ -9,7 +9,7 @@
 <body>
 <header>
     <div id ="top">
-        <a href="index.php" class="logoLink">
+        <a href="index.php" class="logoLink")">
             <img src="public/images/Infinite_measures.gif" alt="logoImage" class="logoImage" width="150em"/>
         </a>
         <?= $nav ?>
@@ -22,7 +22,7 @@
 
 <footer>
     <div id="social">
-        <p><strong>Nous contacter : </strong></p>
+        <p><strong>Nos réseaux sociaux : </strong></p>
         <a href="https://www.facebook.com/InfiniteMeasuresFr/"><img src="public/images/facebook.png" class="socialLogo"></a>
         <a href="https://www.instagram.com/infinite_measures/"><img src="public/images/instagram.png" class="socialLogo"></a>
     </div>

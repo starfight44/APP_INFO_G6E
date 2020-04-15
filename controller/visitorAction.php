@@ -1,7 +1,18 @@
 <?php
 
 function mainPage(){
-    require('view/homeView.php');
+    session_start();
+    if(isset($_SESSION['ID'])){
+        $content = '<section><strong>Comment allez vous '. $_SESSION['pseudo'].' ? </strong></section>';
+        require('view/userSpaceView.php');
+    }
+    elseif (isset($_SESSION['IDmanager'])){
+        $content = '<section><strong>Vous êtes bien connecté sur votre compte manager !</strong></section>';
+        require('view/managerSpaceView.php');
+    }
+    else {
+        require('view/homeView.php');
+    }
 }
 
 function CGU(){
@@ -68,7 +79,7 @@ function register(){
             require('view/registerView.php');
         }
         else {
-            setUserInfos($_POST['pseudo'], $_POST['lastName'], $_POST['firstName'], $_POST['email'], $_POST['password'], $_POST['height'], $_POST['weight'], $_POST['sex'], $_POST['country']);
+            setUserInfos(htmlspecialchars($_POST['pseudo']), htmlspecialchars($_POST['lastName']), htmlspecialchars($_POST['firstName']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']), htmlspecialchars($_POST['height']), htmlspecialchars($_POST['weight']), htmlspecialchars($_POST['sex']), htmlspecialchars($_POST['country']));
             $warning_message = 'inscription réalisée avec succès veuillez vous connecter';
             require('view/connectView.php');
         }

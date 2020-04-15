@@ -55,7 +55,15 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'printUsers') {
         printUsers();
     }
-
+    elseif ($_GET['action'] == 'searchUser') {
+        searchUser();
+    }
+    elseif ($_GET['action'] == 'deleteUser') {
+        deleteUserAccount();
+    }
+    elseif ($_GET['action'] == 'resetPassword') {
+        resetUserPassword();
+    }
 
 }
 else {

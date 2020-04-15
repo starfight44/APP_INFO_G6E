@@ -16,8 +16,8 @@
 
 
 
-<?php $footer_link ='index.php?action=CGU'; ?>
-<?php $label_footer_link ="conditions générales d'utilisation"; ?>
+<?php $footer_link =''; ?>
+<?php $label_footer_link =""; ?>
 
 <?php include('mainTemplate.php'); ?>
 <?php

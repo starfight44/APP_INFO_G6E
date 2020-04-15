@@ -32,8 +32,7 @@ function getUserInfos($ID){
 
 function setUserInfos($pseudo,$lastName,$firstName,$email,$password,$height,$weight,$sex,$country){
     $bdd = bddConnect();
-
-    $requete = $bdd->prepare('INSERT INTO users(pseudo,lastName,firstName,email,password,height,weight,sex,country,date_inscription) VALUES(:pseudo,:lastName,:firstName,:email,:password,:height,:weight,:sex,:country,NOW())');
+    $requete = $bdd->prepare('INSERT INTO users(pseudo,lastName,firstName,email,password,height,weight,sex,country,registration_date) VALUES(:pseudo,:lastName,:firstName,:email,:password,:height,:weight,:sex,:country,NOW())');
     $requete->execute(array(
         'pseudo' => strtolower($pseudo),
         'lastName' => $lastName,
@@ -84,3 +83,4 @@ function isUserInDatabase($pseudo,$email){
         return false;
     }
 }
+

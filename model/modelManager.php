@@ -29,3 +29,15 @@ function getUsersList(){
 
     return $requete->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function deleteAccount($id){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('DELETE FROM users WHERE ID=?');
+    $requete->execute(array($id));
+}
+
+function resetPassword($id,$newPassword){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('UPDATE users SET password=? WHERE ID=?');
+    $requete->execute(array($newPassword,$id));
+}

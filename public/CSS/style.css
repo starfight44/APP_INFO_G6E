@@ -13,22 +13,22 @@ h1
 
 }
 h2{
-    border-bottom: solid #ff4a4d;
+    border-bottom: solid 0.1em #ff4a4d;
 }
 h3
 {
-    border-bottom: solid #ff4a4d;
+    border-bottom: solid 0.1em #ff4a4d;
     margin-bottom: 6%;
 }
 
 .logoLink {
-    margin-top: 2%;
-    width: 13%;
+    margin-top: 2px;
+    width: 150px;
 }
 
 .logoImage
 {
-    width: 100%;
+    width: 150px;
 }
 
 #top /*Partie correspondant au header */
@@ -55,19 +55,19 @@ article{
 
 nav{
     width: 100%;
-    margin-top: 2%;
-    font-size: 1.5vw;
+    margin-top: 2px;
+    font-size: 1.3em;
 }
 
 nav ul{
     list-style-type: none;
-    padding-bottom: 3.1%;
+    padding-bottom: 40px;
     border-bottom: #ff4a4d solid 0.1em;
     background-color: white;
 
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 2%;
+    top: 1px;
 
 
 }
@@ -174,7 +174,8 @@ input[type=button] {
     width: max-content;
     border-radius: 10px;
     font-weight: bold;
-    margin: 2%;
+    margin-bottom: 1%;
+    margin-right: 1%;
 
 }
 
@@ -187,8 +188,60 @@ input[type=button]:hover {
 
 table
 {
+    border-collapse: collapse;
+
 }
 td, th
 {
     padding: 15px;
+
+}
+th{
+    border: solid #ff4a4d 0.13em;
+    color: #ff7689;
+}
+td{
+    border: solid #ff707f 0.1em;
+}
+
+#membres{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+/* Full-width inputs */
+input[type=text]{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #ff4a4d;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 10px;
+    border: none;
+    cursor: pointer;
+    width: max-content;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: #ff707f;
+    border: 1px solid #ff4a4d;
+}
+
+form{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+.warning{
+    color: red;
 }
