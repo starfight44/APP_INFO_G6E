@@ -67,7 +67,7 @@ nav ul{
 
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 1px;
+    top: 10px;
 
 
 }
@@ -157,12 +157,60 @@ footer
     font-style: italic;
     color: #ff7689;
     width: max-content;
+    margin-top: 3%;
+}
+#questionArticle .question:hover{
+    border-bottom: #ff7689 solid 0.1em;
+
 }
 
 #questionArticle .reponse{
     margin-left: 5%;
     margin-bottom: 4%;
     margin-top: 2%;
+}
+div.enfant
+{
+    display: none;
+}
+div.parent:hover .enfant{/*affiche la réponse au survol de la souris*/
+    display:block;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari et Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 input[type=button] {
@@ -245,3 +293,4 @@ form{
 .warning{
     color: red;
 }
+
