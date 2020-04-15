@@ -46,7 +46,7 @@ function setUserInfos($pseudo,$lastName,$firstName,$email,$password,$height,$wei
     ));
 }
 
-function updateUserInfos($lastName,$firstName,$height,$weight,$userID){
+function updateUserInfos($lastName,$firstName,$height,$weight,$id){
     $bdd = bddConnect();
     $requete = $bdd->prepare(' UPDATE users SET lastName=:lastName,firstName=:firstName,height=:height,weight=:weight WHERE ID=:ID');
     $requete->execute(array(
@@ -54,7 +54,7 @@ function updateUserInfos($lastName,$firstName,$height,$weight,$userID){
         'firstName' => $firstName,
         'height' => $height,
         'weight' => $weight,
-        'ID' => $userID,
+        'ID' => $id,
     ));
 }
 

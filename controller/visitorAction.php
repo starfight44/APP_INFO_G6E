@@ -24,7 +24,7 @@ function contact(){
         require('view/contactView.php');
     }
     else{/*sinon on envoie le mail*/
-        if(sendMail()){
+        if(sendMailTo("")){
             require('view/homeView.php');
         }
         else{
@@ -34,7 +34,7 @@ function contact(){
     }
 }
 
-function sendMail(){
+function sendMailTo($mail){
     return false;
 }
 
@@ -80,6 +80,7 @@ function register(){
         }
         else {
             setUserInfos(htmlspecialchars($_POST['pseudo']), htmlspecialchars($_POST['lastName']), htmlspecialchars($_POST['firstName']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']), htmlspecialchars($_POST['height']), htmlspecialchars($_POST['weight']), htmlspecialchars($_POST['sex']), htmlspecialchars($_POST['country']));
+            sendMailTo("");
             $warning_message = 'inscription réalisée avec succès veuillez vous connecter';
             require('view/connectView.php');
         }

@@ -94,10 +94,10 @@ else{
 function resetUserPassword(){
     if(isManagerLog()) {
         require("model/modelManager.php");
-        $newPassword = 'infinitemeasures'. $_SESSION['idUser'];
+        $newPassword = generate_passord();
+        $warning_message=urlencode('Nouveau mot de passe lié à l\'ID utilisateur ').$_SESSION['idUser'].urlencode(' => ').$newPassword;
         $newPassword = password_hash($newPassword,PASSWORD_DEFAULT);
         resetPassword($_SESSION['idUser'],$newPassword);
-        $warning_message=urlencode('mot de passe réinitialisé avec succès');
         $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
         header($url);
     }else{
@@ -114,4 +114,20 @@ function isManagerLog(){
     else{
         return false;
     }
+}
+
+function generate_passord($password_lenght = 7)
+{
+    $password = "";
+
+    $string = "abcdefghjkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ023456789+@!$%?&";
+    $string_lenght = strlen($string);
+
+    for($i = 1; $i <= $password_lenght ; $i++)
+    {
+        $random = mt_rand(0,($string_lenght-1));
+        $password .= $string[$random];
+    }
+
+    return $password;
 }
