@@ -63,6 +63,36 @@ function modifyUserInformations(){
 
 
 
+
+function makeATest(){
+    if(isLoginOk()){
+        require('model/modelUser.php');
+        $donnees = getSensorsChoice($_SESSION['ID']);
+        ob_start();
+        foreach($donnees as $key => $value) {
+            echo '<a href="index.php?action=removeSensor&id_sensor='.$value['id'].'"><p><strong>' . ($key + 1) . ' : </strong>' . $value['type'] .'</p></a>';
+        }
+        $sensorsChoice = ob_get_clean();
+        require('view/makeATestView.php');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/connectView.php');
+    }
+}
+
+function deleteSensorChoice($id_sensor){
+    if(isLoginOk()) {
+        require('model/modelUser.php');
+        deleteSensor($_SESSION['ID'], $id_sensor);
+        header('Location:index.php?action=makeATest');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/connectView.php');
+    }
+}
+
 function userResults(){
     if(isLoginOk()){
 
@@ -73,15 +103,6 @@ function userResults(){
     }
 }
 
-function makeATest(){
-    if(isLoginOk()){
-
-    }
-    else{
-        $warning_message = 'Reconnectez vous';
-        require('view/connectView.php');
-    }
-}
 
 function userHistory(){
     if(isLoginOk()){
@@ -112,4 +133,3 @@ function logout(){
     // On détruit la session
     session_destroy();
     require('view/homeView.php');
-}

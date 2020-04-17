@@ -84,3 +84,18 @@ function isUserInDatabase($pseudo,$email){
     }
 }
 
+function getSensorsChoice($id_user){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('SELECT sensor.type, sensor.id FROM sensorsChoice choice INNER JOIN sensor ON choice.id_sensor = sensor.id WHERE choice.id_user=?');
+    $requete->execute(array($id_user));
+    return $requete->fetchALL(PDO::FETCH_ASSOC);
+}
+
+
+function deleteSensor($id_user,$id_sensor){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('DELETE FROM sensorsChoice WHERE id_user=? AND id_sensor=?');
+    $requete->execute(array($id_user,$id_sensor));
+}

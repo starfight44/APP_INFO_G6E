@@ -64,6 +64,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'resetPassword') {
         resetUserPassword();
     }
+    elseif ($_GET['action'] == 'removeSensor') {
+        deleteSensorChoice($_GET['id_sensor']);
+    }
 
 }
 else {

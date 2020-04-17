@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/visitorAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/visitorAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/homeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/homeView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +31,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="APP_INFO" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -152,6 +150,13 @@
       <workItem from="1586887566767" duration="2598000" />
       <workItem from="1586933476457" duration="4602000" />
       <workItem from="1586944104640" duration="2453000" />
+      <workItem from="1586969391292" duration="296000" />
+      <workItem from="1587024837772" duration="725000" />
+      <workItem from="1587040696458" duration="43000" />
+      <workItem from="1587046163093" duration="35000" />
+      <workItem from="1587054826383" duration="7024000" />
+      <workItem from="1587126139536" duration="1413000" />
+      <workItem from="1587130895356" duration="337000" />
     </task>
     <servers />
   </component>
@@ -167,11 +172,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="396" y="23" width="673" height="876" key="#PHP/0.23.1440.877@0.23.1440.877" timestamp="1584613621878" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586937699609">
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587059091604">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584616565104" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1586937699609" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1587059091604" />
     <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584710034353">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -221,11 +226,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="239" height="539" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1585554535445" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1586935771843">
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1587055133571">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586935771843" />
-    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1586798290988" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1587055133571" />
     <state x="1532" y="-127" width="900" height="877" key="SettingsEditor" timestamp="1586870371418">
       <screen x="1440" y="-127" width="1680" height="1027" />
     </state>

@@ -1,18 +1,8 @@
 <?php
 
 function mainPage(){
-    session_start();
-    if(isset($_SESSION['ID'])){
-        $content = '<section><strong>Comment allez vous '. $_SESSION['pseudo'].' ? </strong></section>';
-        require('view/userSpaceView.php');
-    }
-    elseif (isset($_SESSION['IDmanager'])){
-        $content = '<section><strong>Vous êtes bien connecté sur votre compte manager !</strong></section>';
-        require('view/managerSpaceView.php');
-    }
-    else {
-        require('view/homeView.php');
-    }
+    require('view/homeView.php');
+
 }
 
 function CGU(){
@@ -41,24 +31,31 @@ function sendMailTo($mail){
 
 function connect(){
     session_start();
-    if(!isset($_POST['pseudo'])){ /*si le formulaire n'a pas été rempli on demande de le remplir*/
-        require('view/connectView.php');
+    if(isset($_SESSION['ID'])){
+        $content = '<section><strong>Comment allez vous '. $_SESSION['pseudo'].' ? </strong></section>';
+        require('view/userSpaceView.php');
     }
-    else{
-        require('model/modelUser.php');
-
-        $donnees = getUserConnectionInfos($_POST['pseudo']);
-
-        if(isset($donnees['pseudo']) AND password_verify($_POST['password'],$donnees['password'])) {
-            $_SESSION['ID'] = $donnees['ID'];
-            $_SESSION['pseudo'] = $donnees['pseudo'];
-            $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur '. $_SESSION['pseudo'].' ! </strong></section>';
-            require('view/userSpaceView.php');
-        }
-        else
-        {
-            $warning_message='pseudo ou mot de passe incorrect';
+    elseif (isset($_SESSION['IDmanager'])){
+        $content = '<section><strong>Vous êtes bien connecté sur votre compte manager !</strong></section>';
+        require('view/managerSpaceView.php');
+    }
+    else {
+        if (!isset($_POST['pseudo'])) { /*si le formulaire n'a pas été rempli on demande de le remplir*/
             require('view/connectView.php');
+        } else {
+            require('model/modelUser.php');
+
+            $donnees = getUserConnectionInfos($_POST['pseudo']);
+
+            if (isset($donnees['pseudo']) AND password_verify($_POST['password'], $donnees['password'])) {
+                $_SESSION['ID'] = $donnees['ID'];
+                $_SESSION['pseudo'] = $donnees['pseudo'];
+                $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur ' . $_SESSION['pseudo'] . ' ! </strong></section>';
+                require('view/userSpaceView.php');
+            } else {
+                $warning_message = 'pseudo ou mot de passe incorrect';
+                require('view/connectView.php');
+            }
         }
     }
 }
