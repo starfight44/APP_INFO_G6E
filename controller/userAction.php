@@ -125,7 +125,8 @@ function isLoginOk(){
     }
 }
 
-function logout(){
+function logout()
+{
     // On appelle la session
     session_start();
     // On écrase le tableau de session
@@ -133,3 +134,4 @@ function logout(){
     // On détruit la session
     session_destroy();
     require('view/homeView.php');
+}
