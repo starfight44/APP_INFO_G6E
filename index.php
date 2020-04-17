@@ -67,6 +67,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'removeSensor') {
         deleteSensorChoice($_GET['id_sensor']);
     }
+    elseif ($_GET['action'] == 'addTest') {
+        addSensorChoice();
+    }
 
 }
 else {

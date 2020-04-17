@@ -99,3 +99,11 @@ function deleteSensor($id_user,$id_sensor){
     $requete = $bdd->prepare('DELETE FROM sensorsChoice WHERE id_user=? AND id_sensor=?');
     $requete->execute(array($id_user,$id_sensor));
 }
+
+function addSensor($id_user,$id_sensor){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('INSERT INTO sensorsChoice (id_user,id_sensor) VALUES (?,?)');
+    $requete->execute(array($id_user,$id_sensor));
+}
+

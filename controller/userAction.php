@@ -93,6 +93,26 @@ function deleteSensorChoice($id_sensor){
     }
 }
 
+function addSensorChoice(){
+    if(isLoginOk()){
+        require('model/modelUser.php');
+        $donnees = getSensorsChoice($_SESSION['ID']);
+        foreach($donnees as $key => $value) { /*On recherche si le choix n'est pas déja dans la table, sinon on le supprime et on le replace en derniere position*/
+            if($value['id'] == $_POST['id_sensor']){
+                deleteSensor($_SESSION['ID'],$_POST['id_sensor']);
+            }
+        }
+        addSensor($_SESSION['ID'], $_POST['id_sensor']);
+        header('Location:index.php?action=makeATest');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/connectView.php');
+    }
+}
+
+
+
 function userResults(){
     if(isLoginOk()){
 
