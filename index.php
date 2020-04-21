@@ -70,7 +70,18 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'addTest') {
         addSensorChoice();
     }
-
+    elseif ($_GET['action'] == 'listNonActivatedAccounts') {
+        listNonActivatedAccounts();
+    }
+    elseif ($_GET['action'] == 'activateAccount') {
+        activateAccount();
+    }
+    elseif ($_GET['action'] == 'deleteNonActivatedUser') {
+        deleteNonActivatedUser($_GET['id_user']);
+    }
+    elseif ($_GET['action'] == 'makeManager') {
+        makeManager();
+    }
 }
 else {
     mainPage();

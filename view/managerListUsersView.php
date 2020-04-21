@@ -1,7 +1,6 @@
 <?php ob_start(); ?>
-
 <section>
-    <h3>liste des utilisateurs</h3>
+    <h3>liste des utilisateurs actifs</h3>
 
     <article>
         <form action="index.php?action=searchUser" method="POST">
@@ -23,6 +22,7 @@
                     <th>Pays</th>
                     <th>Date d'inscritpion</th>
                 </tr>
+
                 <?= $listUsers ?>
 
             </table>

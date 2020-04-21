@@ -1,5 +1,6 @@
-<?php $nav = ''; ?> <!-- pas de navigation dans la page CGU -->
+<?php $title = 'CGU'; ?>
 
+<?php $nav = ''; ?> <!-- pas de navigation dans la page CGU -->
 
 <?php ob_start(); ?>  <!-- contenu de la page CGU -->
 

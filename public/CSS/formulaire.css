@@ -110,3 +110,8 @@ a
     text-decoration: none;
     margin: 2%;
 }
+
+#manager{
+    position: absolute;
+    bottom: 10px; left: 10px;
+}

@@ -22,6 +22,7 @@
         </form>
     </div>
 
+    <a href="index.php?action=manager" id="manager">Espace Manager</a>
 <?php $formContent = ob_get_clean(); ?>
 
 <?php require('formTemplate.php'); ?>

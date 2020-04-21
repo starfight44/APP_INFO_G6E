@@ -43,7 +43,7 @@ function modifyUserInformations(){
 
                     updateUserInfos($_POST['lastName'], $_POST['firstName'], $_POST['height'], $_POST['weight'], $connectionDatas['ID']);
                     $warning_message = 'modifications réussies, reconnectez vous !';
-                    require('view/connectView.php');
+                    header('Location:index.php?action=userInformations');
 
             } else {
                 $warning_message = 'Echec, mot de passe incorrect, réessayez';

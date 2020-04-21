@@ -46,13 +46,18 @@ function connect(){
             require('model/modelUser.php');
 
             $donnees = getUserConnectionInfos($_POST['pseudo']);
-
             if (isset($donnees['pseudo']) AND password_verify($_POST['password'], $donnees['password'])) {
-                $_SESSION['ID'] = $donnees['ID'];
-                $_SESSION['pseudo'] = $donnees['pseudo'];
-                $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur ' . $_SESSION['pseudo'] . ' ! </strong></section>';
-                require('view/userSpaceView.php');
-            } else {
+                if(isset($donnees['active_account']) AND $donnees['active_account']==1){
+                    $_SESSION['ID'] = $donnees['ID'];
+                    $_SESSION['pseudo'] = $donnees['pseudo'];
+                    $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur ' . $_SESSION['pseudo'] . ' ! </strong></section>';
+                    require('view/userSpaceView.php');
+                } else {
+                    $warning_message = 'Votre compte n\'est pas encore activé, vous devez attendre qu\'un manager l\'active !';
+                    require('view/connectView.php');
+                }
+            }
+            else{
                 $warning_message = 'pseudo ou mot de passe incorrect';
                 require('view/connectView.php');
             }
@@ -78,10 +83,8 @@ function register(){
         else {
             setUserInfos(htmlspecialchars($_POST['pseudo']), htmlspecialchars($_POST['lastName']), htmlspecialchars($_POST['firstName']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']), htmlspecialchars($_POST['height']), htmlspecialchars($_POST['weight']), htmlspecialchars($_POST['sex']), htmlspecialchars($_POST['country']));
             sendMailTo("");
-            $warning_message = 'inscription réalisée avec succès veuillez vous connecter';
+            $warning_message = 'inscription réalisée avec succès vous devez maintenant attendre qu\'un manager valide votre compte';
             require('view/connectView.php');
         }
     }
 }
-
-

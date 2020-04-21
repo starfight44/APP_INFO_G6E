@@ -222,9 +222,7 @@ input[type=button] {
     width: max-content;
     border-radius: 10px;
     font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    margin-top: 20px;
+    margin: 5px;
 
 }
 

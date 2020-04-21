@@ -106,6 +106,85 @@ function resetUserPassword(){
     }
 }
 
+function listNonActivatedAccounts(){
+    if(isManagerLog()) {
+        require('model/modelManager.php');
+        $donnees = getNonActivatedAccounts();
+       if(count($donnees)==0){
+           $listUsers = '<strong><p>Il n\'y a aucun compte à valider</p></strong>';
+       }
+        else{
+        ob_start();
+        echo '<tr>
+                    <th>ID</th>
+                    <th>Pseudo</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                </tr>';
+        foreach ($donnees as $elt) {
+            echo '<tr>
+                    <td>' . $elt['ID'] . '</td> 
+                    <td>' . $elt['pseudo'] . '</td>
+                    <td>' . $elt['firstName'] . '</td>
+                    <td>' . $elt['lastName'] . '</td>
+                    <td>' . $elt['email'] . '</td>
+                    <td><a href="index.php?action=activateAccount&id_user=' . $elt['ID'] . '"><input type="button" value="Activer le compte"></a></td>
+                    <td><a href="index.php?action=deleteNonActivatedUser&id_user=' . $elt['ID'] . '"><input type="button" value="Supprimer le compte" onclick="return(confirm(\'Êtes vous sur de vouloir supprimer le compte ?\'))"></a></td>
+
+                 </tr>';
+        }
+        $listUsers = ob_get_clean();
+    }
+        require('view/managerListNonActivatedUsersView.php');
+    }else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function deleteNonActivatedUser($id){
+    if(isManagerLog()) {
+        require("model/modelManager.php");
+        deleteAccount($id);
+        header('Location:index.php?action=listNonActivatedAccounts');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function activateAccount(){
+    if(isManagerLog()) {
+        $id_user = $_GET['id_user'];
+        require('model/modelManager.php');
+        activateUserAccount($id_user);
+        header('Location:index.php?action=listNonActivatedAccounts');
+
+    }else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function makeManager(){
+    if(isManagerLog()) {
+        require('model/modelManager.php');
+        $userInfos=getUserInfos($_SESSION['idUser']);
+        $userConnectionInfos=getUserConnectionInfos($_SESSION['idUser']);
+        addManager($userInfos['Nom'],$userInfos['Prénom'],$userInfos['Mail'],$userConnectionInfos['password'],$userInfos['Pays']);
+        $warning_message=urlencode('Compte manager créé avec succès');
+        $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
+        header($url);
+    }else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+
+
 function isManagerLog(){
     session_start();
     if(isset($_SESSION['IDmanager'])) { /*on vérifie si la session n'a pas expiré */

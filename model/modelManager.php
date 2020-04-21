@@ -24,7 +24,7 @@ function getManagerConnectionInfos($email){
 
 function getUsersList(){
     $bdd = bddConnect();
-    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email,height,weight,sex,country,registration_date FROM users');
+    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email,height,weight,sex,country,registration_date FROM users WHERE active_account=1');
     $requete->execute();
 
     return $requete->fetchAll(PDO::FETCH_ASSOC);
@@ -40,4 +40,41 @@ function resetPassword($id,$newPassword){
     $bdd = bddConnect();
     $requete = $bdd->prepare('UPDATE users SET password=? WHERE ID=?');
     $requete->execute(array($newPassword,$id));
+}
+
+function getNonActivatedAccounts(){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email FROM users WHERE active_account=0 ORDER BY registration_date');
+    $requete->execute();
+
+    return $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function activateUserAccount($id_user){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('UPDATE users SET active_account=1 WHERE ID=?');
+    $requete->execute(array($id_user));
+}
+
+function addManager($firtName,$lastName,$email,$password,$country){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('INSERT INTO manager (firstName,lastName,email,password,country) VALUES (?,?,?,?,?)');
+    $requete->execute(array($firtName,$lastName,$email,$password,$country));
+}
+
+function getUserConnectionInfos($ID){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT password,pseudo,ID,active_account FROM users WHERE id= ?');
+    $requete->execute(array($ID));
+
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
+
+function getUserInfos($ID){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('SELECT pseudo Pseudo,lastName Nom ,firstName Prénom,email Mail,height Taille,weight Poids,sex Sexe,country Pays FROM users WHERE id=?');
+    $requete->execute(array($ID));
+    return $requete->fetch(PDO::FETCH_ASSOC);
 }

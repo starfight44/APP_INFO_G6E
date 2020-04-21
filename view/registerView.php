@@ -275,7 +275,7 @@
 
             <input type="checkbox" id="CGU" required/>
 
-            <label for="CGU">J'accepte les<a href="CGU.html">CGU</a> </label>
+            <label for="CGU">J'accepte les<a href="index.php?action=CGU">CGU</a> </label>
             <br>
             <br>
             <a href="index.php?action=connect">J'ai déjà un compte</a>

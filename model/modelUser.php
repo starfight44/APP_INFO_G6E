@@ -15,7 +15,7 @@ function bddConnect()
 
 function getUserConnectionInfos($pseudo){
     $bdd = bddConnect();
-    $requete = $bdd->prepare('SELECT password,pseudo,ID FROM users WHERE pseudo= ?');
+    $requete = $bdd->prepare('SELECT password,pseudo,ID,active_account FROM users WHERE pseudo= ?');
     $requete->execute(array($pseudo));
 
     return $requete->fetch();
@@ -25,7 +25,7 @@ function getUserConnectionInfos($pseudo){
 function getUserInfos($ID){
     $bdd = bddConnect();
 
-    $requete = $bdd->prepare('SELECT pseudo Pseudo,lastName Nom ,firstName Prénom,email Mail,height Taille,weight Poids,sex Sexe,country Pays FROM users WHERE id=?');
+    $requete = $bdd->prepare('SELECT pseudo Pseudo,lastName Nom ,firstName Prénom,email Mail,height Taille,weight Poids,sex Sexe,country Pays FROM users WHERE ID=?');
     $requete->execute(array($ID));
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
@@ -65,7 +65,6 @@ function updatePassword($newPassword,$userID){
         'password' => password_hash ($newPassword,PASSWORD_DEFAULT),
         'ID' => $userID));
 }
-
 
 
 function isUserInDatabase($pseudo,$email){
