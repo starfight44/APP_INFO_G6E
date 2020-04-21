@@ -9,7 +9,7 @@
         <li><a href="index.php?action=makeATest" >Test</a></li>
         <li><a href="index.php?action=userResults" >Résultats</a></li>
         <li><a href="index.php?action=userHistoric" >Historique</a></li>
-        <li><a href="index.php?action=" >Messagerie</a></li>
+        <li><a href="index.php?action=userChat" >Messagerie</a></li>
 
 
         <div class ="rightLogo">

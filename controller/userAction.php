@@ -134,6 +134,26 @@ function userHistory(){
     }
 
 }
+function printUserChat(){
+    if(isLoginOk()){
+        require('model/modelUser.php');
+        $donnees = getChatDatas($_SESSION['ID']);
+        ob_start();
+        foreach($donnees as $elt) {
+            echo '<h4>';
+            if($elt['account_type']=='manager'){echo $elt['account_type'];}else{echo 'Vous';}
+            echo '</h4>
+                    <p>'.$elt['content'].'</p>';
+        }
+        $chatDatas = ob_get_clean();
+        require('view/userChatView.php');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/connectView.php');
+    }
+
+}
 
 function isLoginOk(){
     session_start();

@@ -272,11 +272,12 @@ input[type=submit] {
     background-color: #ff4a4d;
     color: white;
     padding: 10px 15px;
-    margin: 8px 10px;
+    margin: 8px 20px;
     border: none;
     cursor: pointer;
     width: max-content;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 input[type=submit]:hover {
@@ -286,7 +287,7 @@ input[type=submit]:hover {
 }
 
 form{
-    width: 85%;
+    width: 50%;
     display: flex;
     justify-content: flex-start;
 }
@@ -308,9 +309,14 @@ a{
 textarea {
     width: 100%;
     padding: 10px 15px;
-    margin: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
+    margin: 10px;
+    margin-top: 20px;
 
+}
+h4{
+    color: #ff7689;
+    border-top: #ff4a4d dotted 0.1em;
 }

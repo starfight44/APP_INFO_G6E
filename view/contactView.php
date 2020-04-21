@@ -6,10 +6,6 @@
     <form action="index.php?action=contact" method="POST">
         <h1>Nous contacter</h1>
 
-        <label><b>Pseudo</b></label>
-        <input type="text" placeholder="Entrez votre nom d'utilisateur" name="pseudo" required>
-
-
         <label><b>E-Mail</b></label>
         <input type="email" placeholder="Entrez votre mail" name="email" required>
 

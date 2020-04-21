@@ -91,6 +91,12 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'addQuestion') {
         addquestion();
     }
+    elseif ($_GET['action'] == 'userChat') {
+        printUserChat();
+    }
+    elseif ($_GET['action'] == 'managerChat') {
+        printManagerChat();
+    }
 
 }
 else {

@@ -22,7 +22,7 @@ function CGU(){
 }
 
 function contact(){
-    if(!isset($_POST['pseudo'])){ /*si le formulaire n'a pas été rempli on demande de le remplir*/
+    if(!isset($_POST['email'])){ /*si le formulaire n'a pas été rempli on demande de le remplir*/
         require('view/contactView.php');
     }
     else{/*sinon on envoie le mail*/
