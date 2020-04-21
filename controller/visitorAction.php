@@ -1,6 +1,18 @@
 <?php
 
 function mainPage(){
+    require('model/modelmanager.php');
+    $donnees = getFAQ();
+    ob_start();
+    foreach ($donnees as $elt)
+    echo '
+    <div class="parent">
+            <p class="question">'.$elt['question'].'</p>
+            <div class="enfant">
+                <p class="reponse">'.$elt['response'].'</p>
+            </div>
+    </div>';
+    $FAQ = ob_get_clean();
     require('view/homeView.php');
 
 }

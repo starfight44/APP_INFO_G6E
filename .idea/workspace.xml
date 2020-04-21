@@ -4,20 +4,14 @@
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/visitorAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/visitorAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/CSS/formulaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/formulaire.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/CSS/nonutilisé.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cguView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cguView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/connectView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/connectView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/managerListUsersView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerListUsersView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/managerModifyUserView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerModifyUserView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/homeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/homeView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/managerSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerSpaceView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/userSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/userSpaceView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +34,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="APP_INFO" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -102,7 +101,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="APP_INFO: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="APP_INFO: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@b9992e0" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -174,6 +183,7 @@
       <workItem from="1587367063241" duration="1064000" />
       <workItem from="1587385964716" duration="747000" />
       <workItem from="1587387607599" duration="253000" />
+      <workItem from="1587471496149" duration="4628000" />
     </task>
     <servers />
   </component>
@@ -215,38 +225,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="250" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1586937709014" />
-    <state width="958" height="162" key="GridCell.Tab.0.bottom" timestamp="1586615150099">
+    <state width="958" height="199" key="GridCell.Tab.0.bottom" timestamp="1587472396343">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
-    <state width="958" height="162" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586615150099" />
+    <state width="958" height="199" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
     <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
-    <state width="958" height="162" key="GridCell.Tab.0.center" timestamp="1586615150098">
+    <state width="958" height="199" key="GridCell.Tab.0.center" timestamp="1587472396343">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584647858846" />
-    <state width="958" height="162" key="GridCell.Tab.0.center/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586615150098" />
+    <state width="958" height="199" key="GridCell.Tab.0.center/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
     <state width="1398" height="114" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584736990054" />
-    <state width="958" height="162" key="GridCell.Tab.0.left" timestamp="1586615150097">
+    <state width="958" height="199" key="GridCell.Tab.0.left" timestamp="1587472396341">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584647858845" />
-    <state width="958" height="162" key="GridCell.Tab.0.left/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586615150097" />
+    <state width="958" height="199" key="GridCell.Tab.0.left/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396341" />
     <state width="1398" height="114" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584736990054" />
-    <state width="958" height="162" key="GridCell.Tab.0.right" timestamp="1586615150098">
+    <state width="958" height="199" key="GridCell.Tab.0.right" timestamp="1587472396343">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
-    <state width="958" height="162" key="GridCell.Tab.0.right/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586615150098" />
+    <state width="958" height="199" key="GridCell.Tab.0.right/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
     <state width="1398" height="114" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
     <state width="239" height="539" key="HiddenNamespacesPopup" timestamp="1585554535445">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="239" height="539" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1585554535445" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1587199655020">
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1587472494944">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586935771843" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472494944" />
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1587199655020" />
     <state x="1532" y="-127" width="900" height="877" key="SettingsEditor" timestamp="1586870371418">
       <screen x="1440" y="-127" width="1680" height="1027" />

@@ -12,6 +12,12 @@ function bddConnect()
     }
 }
 
+function getFAQ(){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT id,question,response FROM FAQ');
+    $requete->execute(array());
+    return $requete->fetchAll();
+}
 
 function getManagerConnectionInfos($email){
     $bdd = bddConnect();
@@ -77,4 +83,17 @@ function getUserInfos($ID){
     $requete = $bdd->prepare('SELECT pseudo Pseudo,lastName Nom ,firstName Prénom,email Mail,height Taille,weight Poids,sex Sexe,country Pays FROM users WHERE id=?');
     $requete->execute(array($ID));
     return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
+function deleteFAQ($id_question){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('DELETE FROM FAQ WHERE id=?');
+    $requete->execute(array($id_question));
+}
+
+function addFAQ($question,$response){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('INSERT INTO FAQ (question,response)VALUES(?,?)');
+    $requete->execute(array($question,$response));
 }

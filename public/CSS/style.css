@@ -98,7 +98,6 @@ header
     background-color: white;
 }
 
-
 .connect /*Bouton de connecter placé à droite de la page*/
 {
     position: absolute;
@@ -258,13 +257,15 @@ td{
 }
 /* Full-width inputs */
 input[type=text]{
-    width: 100%;
+    width: min-content;
+    height: 40px;
     padding: 10px 15px;
-    margin: 8px 0;
+    margin: 8px 3px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
 }
+
 
 /* Set a style for all buttons */
 input[type=submit] {
@@ -285,7 +286,7 @@ input[type=submit]:hover {
 }
 
 form{
-    width: 25%;
+    width: 85%;
     display: flex;
     justify-content: flex-start;
 }
@@ -301,5 +302,15 @@ a{
 #addTest{
     text-align: center;
     margin-left: 40%;
+
+}
+
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
 
 }

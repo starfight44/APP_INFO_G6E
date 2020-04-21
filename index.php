@@ -82,6 +82,16 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'makeManager') {
         makeManager();
     }
+    elseif ($_GET['action'] == 'manageFAQ') {
+        manageFAQ();
+    }
+    elseif ($_GET['action'] == 'deleteQuestion') {
+        deleteQuestion($_GET['id_question']);
+    }
+    elseif ($_GET['action'] == 'addQuestion') {
+        addquestion();
+    }
+
 }
 else {
     mainPage();

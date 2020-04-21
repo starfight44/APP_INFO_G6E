@@ -13,6 +13,7 @@ function bddConnect()
 }
 
 
+
 function getUserConnectionInfos($pseudo){
     $bdd = bddConnect();
     $requete = $bdd->prepare('SELECT password,pseudo,ID,active_account FROM users WHERE pseudo= ?');

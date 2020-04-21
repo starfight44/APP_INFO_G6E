@@ -183,7 +183,47 @@ function makeManager(){
     }
 }
 
+function manageFAQ(){
+    if(isManagerLog()) {
+        require('model/modelManager.php');
+        $donnees = getFAQ();
+        if (count($donnees) == 0) {
+            $FAQ = '<strong><p>Il y a aucune question dans la FAQ</p></strong>';
+        } else {
+            ob_start();
+            echo '<tr>                 
+                    <th>Question</th>
+                    <th>Reponse</th>
+                </tr>';
+            foreach ($donnees as $elt) {
+                echo '<tr>
+                    <td>' . $elt['question'] . '</td> 
+                    <td>' . $elt['response'] . '</td>                   
+                    <td><a href="index.php?action=deleteQuestion&id_question=' . $elt['id'] . '"><input type="button" value="Supprimer la question"></a></td>                 
+                 </tr>';
+            }
+        }
+        $FAQ = ob_get_clean();
+        require('view/managerFAQ.php');
 
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function deleteQuestion($id_question){
+    require('model/modelManager.php');
+    deleteFAQ($id_question);
+    header('Location: index.php?action=manageFAQ');
+}
+
+function addQuestion(){
+    require('model/modelManager.php');
+    addFAQ(htmlspecialchars($_POST['question']),htmlspecialchars($_POST['response']));
+    header('Location: index.php?action=manageFAQ');
+}
 
 function isManagerLog(){
     session_start();

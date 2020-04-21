@@ -69,43 +69,9 @@
 
     <h2 id="F.A.Q.">F.A.Q.</h2>
     <article id="questionArticle">
-        <div class="parent">
-            <p class="question">- Cum innocentium culpa saepeque provincias innocentium minabatur inmunibus ?</p>
-            <div class="enfant">
-                <p class="reponse">Cum innocentium culpa saepeque provincias innocentium minabatur inmunibus culpa discessurum: agens homines omni minabatur praefectis quieti culpa aperta agens culpa in tandem aperta inmunibus omni malivolus coalitos id gemens homines aerumnas pro minabatur gemens proiectare proiectare cum saepeque ut id agens innocentium perquisitor malivolus praefectis minabatur illas saepeque innocentium graviter ab minabatur cum non ab innocentium pro tandem in desineret illas discessurum: in in proiectare ab ut parceretur proiectare ut parceretur coalitos agens proiectare se discessurum: minabatur aperta ut agens graviter id ut aperta agens gemens gemens ab parceretur omni obsecrans gemens innocentium perquisitor provincias malivolus provincias graviter homines id.
-               </p>
-            </div>
-        </div>
 
-        <div class="parent">
-            <p class="question">- Praefectis quieti culpa aperta agens culpa in tandem ?</p>
-            <div class="enfant">
-                <p class="reponse">Cum innocentium culpa saepeque provincias innocentium minabatur inmunibus culpa discessurum: agens homines omni minabatur praefectis quieti culpa aperta agens culpa in tandem aperta inmunibus omni malivolus coalitos id gemens homines aerumnas pro minabatur gemens proiectare proiectare cum saepeque ut id agens innocentium perquisitor malivolus praefectis minabatur illas saepeque innocentium graviter ab minabatur cum non ab innocentium pro tandem in desineret illas discessurum: in in proiectare ab ut parceretur proiectare ut parceretur coalitos agens proiectare se discessurum: minabatur aperta ut agens graviter id ut aperta agens gemens gemens ab parceretur omni obsecrans gemens innocentium perquisitor provincias malivolus provincias graviter homines id.
-               </p>
-            </div>
-        </div>
-        <div class="parent">
-            <p class="question">- Illas saepeque innocentium graviter ab minabatur cum non ab innocentium pro tandem i ?</p>
-            <div class="enfant">
-                <p class="reponse">Cum innocentium culpa saepeque provincias innocentium minabatur inmunibus culpa discessurum: agens homines omni minabatur praefectis quieti culpa aperta agens culpa in tandem aperta inmunibus omni malivolus coalitos id gemens homines aerumnas pro minabatur gemens proiectare proiectare cum saepeque ut id agens innocentium perquisitor malivolus praefectis minabatur illas saepeque innocentium graviter ab minabatur cum non ab innocentium pro tandem in desineret illas discessurum: in in proiectare ab ut parceretur proiectare ut parceretur coalitos agens proiectare se discessurum: minabatur aperta ut agens graviter id ut aperta agens gemens gemens ab parceretur omni obsecrans gemens innocentium perquisitor provincias malivolus provincias graviter homines id.
-             </p>
-            </div>
-        </div>
-        <div class="parent">
-            <p class="question">- Unibus culpa discessurum: agens homines omni minabatur  ?</p>
-            <div class="enfant">
-                <p class="reponse">Cum innocentium culpa saepeque provincias innocentium minabatur inmunibus culpa discessurum: agens homines omni minabatur praefectis quieti culpa aperta agens culpa in tandem aperta inmunibus omni malivolus coalitos id gemens homines aerumnas pro minabatur gemens proiectare proiectare cum saepeque ut id agens innocentium perquisitor malivolus praefectis minabatur illas saepeque innocentium graviter ab minabatur cum non ab innocentium pro tandem in desineret illas discessurum: in in proiectare ab ut parceretur proiectare ut parceretur coalitos agens proiectare se discessurum: minabatur aperta ut agens graviter id ut aperta agens gemens gemens ab parceretur omni obsecrans gemens innocentium perquisitor provincias malivolus provincias graviter homines id.
-                </p>
-            </div>
-        </div>
+        <?= $FAQ ?>
 
-        <div class="parent">
-            <p class="question">- Cum innocentium culpa saepeque provincias innocentium minabatu culpa aperta a  ?</p>
-            <div class="enfant">
-                <p class="reponse">Cum innocentium culpa saepeque provincias innocentium minabatur inmunibus culpa discessurum: agens homines omni minabatur praefectis quieti culpa aperta agens culpa in tandem aperta inmunibus omni malivolus coalitos id gemens homines aerumnas pro minabatur gemens proiectare proiectare cum saepeque ut id agens innocentium perquisitor malivolus praefectis minabatur illas saepeque innocentium graviter ab minabatur cum non ab innocentium pro tandem in desineret illas discessurum: in in proiectare ab ut parceretur proiectare ut parceretur coalitos agens proiectare se discessurum: minabatur aperta ut agens graviter id ut aperta agens gemens gemens ab parceretur omni obsecrans gemens innocentium perquisitor provincias malivolus provincias graviter homines id.
-                </p>
-            </div>
-        </div>
 
     </article>
 
