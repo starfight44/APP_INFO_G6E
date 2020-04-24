@@ -61,6 +61,15 @@ function modifyUserInformations(){
     }
 }
 
+function homeUser(){
+    if(isLoginOk()) {
+        require('view/homeUserView.php');
+    }
+    else{
+            $warning_message = 'Reconnectez vous';
+            require('view/connectView.php');
+        }
+}
 
 
 
@@ -115,7 +124,7 @@ function addSensorChoice(){
 
 function userResults(){
     if(isLoginOk()){
-
+        require('view/resultsView.php');
     }
     else{
         $warning_message = 'Reconnectez vous';
@@ -126,24 +135,24 @@ function userResults(){
 
 function userHistory(){
     if(isLoginOk()){
-
+        require('view/historyView.php');
     }
     else{
         $warning_message = 'Reconnectez vous';
         require('view/connectView.php');
     }
-
 }
+
 function printUserChat(){
     if(isLoginOk()){
         require('model/modelUser.php');
         $donnees = getChatDatas($_SESSION['ID']);
         ob_start();
         foreach($donnees as $elt) {
-            echo '<h4>';
-            if($elt['account_type']=='manager'){echo $elt['account_type'];}else{echo 'Vous';}
+            echo '<h4';
+            if($elt['account_type']=='manager'){echo ' id="manager">Manager';}else{echo ' id=user>Vous';}
             echo '</h4>
-                    <p>'.$elt['content'].'</p>';
+                    <p id="content">'.$elt['content'].'</p>';
         }
         $chatDatas = ob_get_clean();
         require('view/userChatView.php');
@@ -154,6 +163,19 @@ function printUserChat(){
     }
 
 }
+
+function newUserMessage(){
+    if(isLoginOk()){
+        require('model/modelUser.php');
+        sendMessage($_POST['message'],$_SESSION['ID']);
+        header('Location:index.php?action=userChat');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/connectView.php');
+    }
+}
+
 
 function isLoginOk(){
     session_start();
@@ -173,5 +195,5 @@ function logout()
     $_SESSION = array();
     // On détruit la session
     session_destroy();
-    require('view/homeView.php');
+    header('Location: index.php');
 }

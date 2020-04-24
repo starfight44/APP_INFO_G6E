@@ -10,8 +10,7 @@ function managerConnect(){
 
         if(isset($donnees['email']) AND password_verify($_POST['password'],$donnees['password'])) {
             $_SESSION['IDmanager'] = $donnees['id'];
-            $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte manager !</strong></section>';
-            require('view/managerSpaceView.php');
+            header('Location:index.php?action=printUsers');
         }
         else
         {
@@ -223,6 +222,85 @@ function addQuestion(){
     require('model/modelManager.php');
     addFAQ(htmlspecialchars($_POST['question']),htmlspecialchars($_POST['response']));
     header('Location: index.php?action=manageFAQ');
+}
+
+function managerChatChoice(){
+    if(isManagerLog()) {
+        require('model/modelManager.php');
+        $donnees = getActiveChats();
+        if(count($donnees)==0){
+            $userChatList = '<strong><p>Il n\'y a aucun chat actif</p></strong>';
+        }
+        else{
+            ob_start();
+            echo '<tr>
+                    <th>Id</th>
+                    <th>Pseudo</th>
+                    <th>Email</th>
+                </tr>';
+            foreach ($donnees as $elt) {
+                echo '<tr>
+                    <td>' . $elt['ID'] . '</td> 
+                    <td>' . $elt['pseudo'] . '</td> 
+                    <td>' . $elt['email'] . '</td>                 
+                    <td><a href="index.php?action=goToChat&id_user=' . $elt['ID'] . '"><input type="button" value="Voir le chat"></a></td>                 
+                 </tr>';
+            }
+            $userChatList = ob_get_clean();
+        }
+        require('view/managerChatChoice.php');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+
+function goToChat($id_user){
+    if(isManagerLog()) {
+        $_SESSION['id_user'] = $id_user;
+        require('model/modelManager.php');
+        $donnees = getChatDatas($id_user);
+        ob_start();
+        foreach($donnees as $elt) {
+            echo '<h4';
+            if($elt['account_type']=='manager'){echo ' id="manager">Manager';}else{echo ' id=user>Utilisateur';}
+            echo '</h4>
+                    <p id="content">'.$elt['content'].'</p>';
+        }
+        $chatDatas = ob_get_clean();
+        require('view/managerChatView.php');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function newManagerMessage(){
+    if(isManagerLog()){
+        require('model/modelManager.php');
+        sendMessage($_POST['message'],$_SESSION['id_user']);
+        $url = 'Location:index.php?action=goToChat&id_user='.$_SESSION['id_user'];
+        header($url);
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
+}
+
+function deleteMessages(){
+    if(isManagerLog()){
+        require('model/modelManager.php');
+        deleteMessageDatas($_SESSION['id_user']);
+        header('Location:index.php?action=managerChatChoice');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/managerConnectView.php');
+    }
 }
 
 function isManagerLog(){

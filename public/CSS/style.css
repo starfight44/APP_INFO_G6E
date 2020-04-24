@@ -78,7 +78,6 @@ nav ul li{
     text-align: center;
     margin-right: 5%;
 
-
 }
 
 nav a{
@@ -257,10 +256,10 @@ td{
 }
 /* Full-width inputs */
 input[type=text]{
-    width: min-content;
+    width: max-content;
     height: 40px;
     padding: 10px 15px;
-    margin: 8px 3px;
+    margin: 8px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
@@ -277,7 +276,6 @@ input[type=submit] {
     cursor: pointer;
     width: max-content;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
 input[type=submit]:hover {
@@ -306,17 +304,51 @@ a{
 
 }
 
-textarea {
+textarea{
     width: 100%;
     padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
     margin: 10px;
-    margin-top: 20px;
+    margin-left: 0px;
 
 }
-h4{
+select{
+    width: 50%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+
+ h4{
     color: #ff7689;
     border-top: #ff4a4d dotted 0.1em;
+     margin-top: 3%;
+     margin-bottom: 0px;
 }
+
+
+ .message{
+     height: 500px;
+     overflow: scroll;
+     border: #fd6c9e solid 0.1em;
+     padding-right: 40px;
+     padding-left: 40px;
+     border-radius: 10px;
+     background-color: #fff3f8;
+     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+ }
+
+ #manager{
+     text-align: right;
+ }
+
+ #content{
+     text-align: center;
+ }

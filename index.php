@@ -44,7 +44,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'userHistory') {
         userHistory();
     }
-
+    elseif ($_GET['action'] == 'homeUser') {
+        homeUser();
+    }
     elseif ($_GET['action'] == 'modifyUserInformations') {
         modifyUserInformations();
     }
@@ -96,6 +98,21 @@ if (isset($_GET['action'])) {
     }
     elseif ($_GET['action'] == 'managerChat') {
         printManagerChat();
+    }
+    elseif ($_GET['action'] == 'newUserMessage') {
+        newUserMessage();
+    }
+    elseif ($_GET['action'] == 'managerChatChoice') {
+        managerChatChoice();
+    }
+    elseif ($_GET['action'] == 'goToChat') {
+        goToChat($_GET['id_user']);
+    }
+    elseif ($_GET['action'] == 'newManagerMessage') {
+        newManagerMessage();
+    }
+    elseif ($_GET['action'] == 'deleteMessages') {
+        deleteMessages();
     }
 
 }

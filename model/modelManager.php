@@ -12,12 +12,6 @@ function bddConnect()
     }
 }
 
-function getFAQ(){
-    $bdd = bddConnect();
-    $requete = $bdd->prepare('SELECT id,question,response FROM FAQ');
-    $requete->execute(array());
-    return $requete->fetchAll();
-}
 
 function getManagerConnectionInfos($email){
     $bdd = bddConnect();
@@ -85,6 +79,13 @@ function getUserInfos($ID){
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
 
+function getFAQ(){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT id,question,response FROM FAQ ORDER BY id DESC');
+    $requete->execute(array());
+    return $requete->fetchAll();
+}
+
 function deleteFAQ($id_question){
     $bdd = bddConnect();
 
@@ -96,4 +97,31 @@ function addFAQ($question,$response){
     $bdd = bddConnect();
     $requete = $bdd->prepare('INSERT INTO FAQ (question,response)VALUES(?,?)');
     $requete->execute(array($question,$response));
+}
+
+function getActiveChats(){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT DISTINCT u.pseudo,u.email,u.ID FROM users u INNER JOIN message m ON u.ID = m.id_user');
+    $requete->execute(array());
+    return $requete->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getChatDatas($id_user){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT account_type,content FROM message WHERE id_user=? ORDER BY sending_date DESC LIMIT 20');
+    $requete->execute(array($id_user));
+    return $requete->fetchALL(PDO::FETCH_ASSOC);
+}
+
+function sendMessage($message,$id_user)
+{
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('INSERT INTO message (content,sending_date,id_user,account_type)VALUES(?,NOW(),?,?)');
+    $requete->execute(array($message, $id_user, 'manager'));
+}
+
+function deleteMessageDatas($id_user){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('DELETE FROM message WHERE id_user=?');
+    $requete->execute(array($id_user));
 }

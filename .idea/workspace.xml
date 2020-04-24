@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/view/historyView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/visitorAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/visitorAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/modelManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/contactView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contactView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerChatView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerChatView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerFAQ.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerFAQ.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerListUsersView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerListUsersView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerSpaceView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/userChatView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/userChatView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/userSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/userSpaceView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,17 +106,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="APP_INFO: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="APP_INFO: root" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@b9992e0" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -182,6 +179,11 @@
       <workItem from="1587385964716" duration="747000" />
       <workItem from="1587387607599" duration="253000" />
       <workItem from="1587471496149" duration="7046000" />
+      <workItem from="1587478931282" duration="195000" />
+      <workItem from="1587479444085" duration="4145000" />
+      <workItem from="1587492582268" duration="6053000" />
+      <workItem from="1587550072254" duration="699000" />
+      <workItem from="1587732289771" duration="2838000" />
     </task>
     <servers />
   </component>
@@ -223,49 +225,57 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="250" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1586937709014" />
-    <state width="958" height="199" key="GridCell.Tab.0.bottom" timestamp="1587472396343">
+    <state width="958" height="198" key="GridCell.Tab.0.bottom" timestamp="1587495053088">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
     <state width="958" height="199" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
-    <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
-    <state width="958" height="199" key="GridCell.Tab.0.center" timestamp="1587472396343">
+    <state width="958" height="198" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587495053088" />
+    <state width="958" height="198" key="GridCell.Tab.0.center" timestamp="1587495053087">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584647858846" />
     <state width="958" height="199" key="GridCell.Tab.0.center/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
-    <state width="1398" height="114" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584736990054" />
-    <state width="958" height="199" key="GridCell.Tab.0.left" timestamp="1587472396341">
+    <state width="958" height="198" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587495053087" />
+    <state width="958" height="198" key="GridCell.Tab.0.left" timestamp="1587495053087">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584647858845" />
     <state width="958" height="199" key="GridCell.Tab.0.left/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396341" />
-    <state width="1398" height="114" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584736990054" />
-    <state width="958" height="199" key="GridCell.Tab.0.right" timestamp="1587472396343">
+    <state width="958" height="198" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587495053086" />
+    <state width="958" height="198" key="GridCell.Tab.0.right" timestamp="1587495053088">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
     <state width="958" height="199" key="GridCell.Tab.0.right/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
-    <state width="1398" height="114" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584736990055" />
+    <state width="958" height="198" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587495053088" />
     <state width="239" height="539" key="HiddenNamespacesPopup" timestamp="1585554535445">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="239" height="539" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1585554535445" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1587476393976">
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1587732967628">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587476393976" />
-    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1587199655020" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587732967628" />
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1587492607017" />
     <state x="1532" y="-127" width="900" height="877" key="SettingsEditor" timestamp="1586870371418">
       <screen x="1440" y="-127" width="1680" height="1027" />
     </state>
     <state x="79" y="23" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586609763230" />
     <state x="1532" y="-127" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@1440.-127.1680.1027" timestamp="1586870371418" />
     <state x="79" y="23" width="900" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1585753745938" />
-    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup" timestamp="1587477782442">
+    <state width="503" height="445" key="SwitcherDM" timestamp="1587498602847">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587477782442" />
+    <state width="503" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1587498602847" />
+    <state x="482" y="222" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1587497740010">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="482" y="222" key="com.intellij.database.run.ParametersPanel.Standalone/0.23.1440.877@0.23.1440.877" timestamp="1587497740010" />
+    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup" timestamp="1587733517241">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587733517241" />
     <state x="385" y="112" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1587206316795" />
   </component>
 </project>

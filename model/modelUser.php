@@ -109,7 +109,14 @@ function addSensor($id_user,$id_sensor){
 
 function getChatDatas($id_user){
     $bdd = bddConnect();
-    $requete = $bdd->prepare('SELECT account_type,content FROM message WHERE id_user=? ORDER BY sending_date LIMIT 10');
+    $requete = $bdd->prepare('SELECT account_type,content FROM message WHERE id_user=? ORDER BY sending_date DESC LIMIT 20');
     $requete->execute(array($id_user));
     return $requete->fetchALL(PDO::FETCH_ASSOC);
+}
+
+function sendMessage($message,$id_user){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('INSERT INTO message (content,sending_date,id_user,account_type)VALUES(?,NOW(),?,?)');
+    $requete->execute(array($message,$id_user,'user'));
+
 }

@@ -44,12 +44,10 @@ function sendMailTo($mail){
 function connect(){
     session_start();
     if(isset($_SESSION['ID'])){
-        $content = '<section><strong>Comment allez vous '. $_SESSION['pseudo'].' ? </strong></section>';
-        require('view/userSpaceView.php');
+        header('Location: index.php?action=homeUser');
     }
     elseif (isset($_SESSION['IDmanager'])){
-        $content = '<section><strong>Vous êtes bien connecté sur votre compte manager !</strong></section>';
-        require('view/managerSpaceView.php');
+        header('Location: index.php?action=printUsers');
     }
     else {
         if (!isset($_POST['pseudo'])) { /*si le formulaire n'a pas été rempli on demande de le remplir*/
@@ -62,8 +60,7 @@ function connect(){
                 if(isset($donnees['active_account']) AND $donnees['active_account']==1){
                     $_SESSION['ID'] = $donnees['ID'];
                     $_SESSION['pseudo'] = $donnees['pseudo'];
-                    $content = '<section><strong>Bonjour, vous êtes bien connecté sur votre compte utilisateur ' . $_SESSION['pseudo'] . ' ! </strong></section>';
-                    require('view/userSpaceView.php');
+                    header('Location: index.php?action=homeUser');
                 } else {
                     $warning_message = 'Votre compte n\'est pas encore activé, vous devez attendre qu\'un manager l\'active !';
                     require('view/connectView.php');
