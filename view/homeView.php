@@ -3,7 +3,7 @@
 
 <?php ob_start(); ?>  <!-- Menu de la page home -->
 <nav>
-    <ul id="navigation">
+    <ul id="menu">
         <li><a href="#Product" >Produit</a></li>
         <li><a href="#Statistiques" >Statistiques</a></li>
         <li><a href="#F.A.Q.">F.A.Q.</a></li>
