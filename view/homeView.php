@@ -13,16 +13,7 @@
         <div class = "connectLogo">
             <li>
                 <a href="index.php?action=connect" class="connect"><img src="public/images/moncompte.png" id = "logoMoncompte">
-                    <?php session_start();
-                    if(isset($_SESSION['ID'])){
-                        echo $_SESSION['pseudo'];
-                    }
-                        elseif (isset($_SESSION['IDmanager'])){
-                        echo 'Espace manager';
-                    }
-                    else{
-                        echo 'Se connecter';}
-                    ?></a>
+                   <?= $connection_state ?></a>
             </li>
         </div>
     </ul>

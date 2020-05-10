@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="public/CSS/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title><?= $title ?></title>
 </head>
 
@@ -32,5 +33,11 @@
     </div>
 
 </footer>
+
+<?php
+if(isset($script)){
+    echo $script;
+}
+?>
 </body>
 </html>

@@ -2,6 +2,19 @@
 
 function mainPage(){
     require('model/modelmanager.php');
+    session_start();
+
+
+    if (isset($_SESSION['ID'])) {
+        $connection_state = $_SESSION['pseudo'];
+    } elseif (isset($_SESSION['IDmanager'])) {
+        $connection_state = 'Espace manager';
+    } else {
+        addVisitor(); //on incrémente le nombre de visiteur
+        $connection_state = 'Se connecter';
+    }
+
+
     $donnees = getFAQ();
     ob_start();
     foreach ($donnees as $elt)
@@ -13,6 +26,9 @@ function mainPage(){
             </div>
     </div>';
     $FAQ = ob_get_clean();
+
+
+
     require('view/homeView.php');
 
 }

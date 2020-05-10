@@ -93,7 +93,7 @@ else{
 function resetUserPassword(){
     if(isManagerLog()) {
         require("model/modelManager.php");
-        $newPassword = generate_passord();
+        $newPassword = generate_password();
         $warning_message=urlencode('Nouveau mot de passe lié à l\'ID utilisateur ').$_SESSION['idUser'].urlencode(' => ').$newPassword;
         $newPassword = password_hash($newPassword,PASSWORD_DEFAULT);
         resetPassword($_SESSION['idUser'],$newPassword);
@@ -303,6 +303,25 @@ function deleteMessages(){
     }
 }
 
+
+function numberOfVisitors(){
+    if(isManagerLog()){
+        require('model/modelManager.php');
+        $nbOfLogPerDay = array();
+        for($day = 0 ; $day >= -6; $day--){
+            array_push($nbOfLogPerDay,getNumberOfLogsPerDay($day)['tot']);
+        }
+
+        $menProportion = getProportion('Homme')['percentage'];
+        $womenProportion = getProportion('Femme')['percentage'];
+        require('view/managerVisitorsDatasView.php');
+ }
+else{
+    $warning_message = 'Reconnectez vous';
+    require('view/managerConnectView.php');
+}
+}
+
 function isManagerLog(){
     session_start();
     if(isset($_SESSION['IDmanager'])) { /*on vérifie si la session n'a pas expiré */
@@ -313,7 +332,7 @@ function isManagerLog(){
     }
 }
 
-function generate_passord($password_lenght = 7)
+function generate_password($password_lenght = 7)
 {
     $password = "";
 

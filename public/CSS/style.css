@@ -13,6 +13,8 @@
         left: 40px;
     }
 
+
+
 }
 
 /*style principal du site (page main)*/
@@ -368,4 +370,15 @@ select{
 
  #content{
      text-align: center;
+ }
+
+ #diagram{
+     width: 50%;
+     min-width: 400px;
+     margin-top: 5%;
+ }
+
+ .datas{
+     display: flex;
+     flex-wrap: wrap;
  }

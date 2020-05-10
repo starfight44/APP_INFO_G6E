@@ -12,6 +12,30 @@ function bddConnect()
     }
 }
 
+function addVisitor(){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('INSERT INTO visitor (date_of_visit) VALUES(NOW())');
+    $requete->execute();
+}
+
+function getNumberOfLogsPerDay($daysInterval){ //$daysInterval peut être égal a -1 ... -2 etc et ce qui correspond au nombre de jours que l'on veut retrancher par rapport à la date actuelle
+    $bdd = bddConnect();
+    $req = $bdd->prepare('SELECT COUNT(*) as tot FROM `visitor` WHERE DAY(DATE_SUB(NOW(),INTERVAL ? DAY))=DAY(date_of_visit)');
+    $req->execute(array($daysInterval));
+    return $req->fetch(PDO::FETCH_ASSOC);
+}
+
+
+
+function getProportion($sex){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT (COUNT(*)*100/(SELECT COUNT(*) FROM users)) as percentage FROM users WHERE sex=? AND active_account=1');
+    $requete->execute(array($sex));
+
+    return $requete->fetch();
+}
+
+
 function getManagerConnectionInfos($email){
     $bdd = bddConnect();
     $requete = $bdd->prepare('SELECT email,password,id FROM manager WHERE email= ?');
@@ -123,3 +147,4 @@ function deleteMessageDatas($id_user){
     $requete = $bdd->prepare('DELETE FROM message WHERE id_user=?');
     $requete->execute(array($id_user));
 }
+

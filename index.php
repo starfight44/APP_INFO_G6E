@@ -114,6 +114,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'deleteMessages') {
         deleteMessages();
     }
+    elseif ($_GET['action'] == 'numberOfVisitors') {
+        numberOfVisitors();
+    }
 
 }
 else {
