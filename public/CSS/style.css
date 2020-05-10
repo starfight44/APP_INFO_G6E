@@ -382,3 +382,39 @@ select{
      display: flex;
      flex-wrap: wrap;
  }
+
+ #results_container{
+     display: flex;
+     flex-wrap: wrap;
+ }
+.result_data{
+    position: relative;
+    width:250px;
+    height: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: solid 1px #ff4a4d;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#soundRec{
+    width:560px;
+}
+
+h5{
+    color: #ff4a4d;
+    font-size: xxx-large;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+h6{
+    font-size: x-large;
+    color: #ff7689;
+    margin: 0;
+
+}
