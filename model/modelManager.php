@@ -12,7 +12,6 @@ function bddConnect()
     }
 }
 
-
 function getManagerConnectionInfos($email){
     $bdd = bddConnect();
     $requete = $bdd->prepare('SELECT email,password,id FROM manager WHERE email= ?');
@@ -20,7 +19,6 @@ function getManagerConnectionInfos($email){
 
     return $requete->fetch();
 }
-
 
 function getUsersList(){
     $bdd = bddConnect();

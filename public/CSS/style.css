@@ -351,7 +351,7 @@ select{
 
 
  .message{
-     height: 500px;
+     height: 400px;
      overflow: scroll;
      border: #fd6c9e solid 0.1em;
      padding-right: 40px;

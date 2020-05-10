@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/modelManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/homeView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/homeView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="8419a2c3-2417-4f48-8584-30595d49b197" name="MAMP" />
+    </servers>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1ZLHjCkSA7VlkmM0OuJljc3ntGd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,7 +81,7 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -85,7 +91,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="MAMP" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$">
+    <configuration name="MAMP" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="MAMP" start_url="/APP_MVC/">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="Unnamed">
       <method v="2" />
     </configuration>
   </component>
@@ -171,7 +180,24 @@
       <workItem from="1587479444085" duration="4145000" />
       <workItem from="1587492582268" duration="6053000" />
       <workItem from="1587550072254" duration="699000" />
-      <workItem from="1587732289771" duration="4949000" />
+      <workItem from="1587732289771" duration="5249000" />
+      <workItem from="1587977931155" duration="306000" />
+      <workItem from="1587978433918" duration="298000" />
+      <workItem from="1588076976532" duration="90000" />
+      <workItem from="1588232178266" duration="311000" />
+      <workItem from="1588233042961" duration="92000" />
+      <workItem from="1588316911763" duration="39000" />
+      <workItem from="1588411061904" duration="26000" />
+      <workItem from="1588411508769" duration="276000" />
+      <workItem from="1588412194179" duration="7000" />
+      <workItem from="1588412657474" duration="9000" />
+      <workItem from="1588412887658" duration="7000" />
+      <workItem from="1588583685275" duration="589000" />
+      <workItem from="1588584580498" duration="1655000" />
+      <workItem from="1588949465224" duration="39000" />
+      <workItem from="1588949550082" duration="12000" />
+      <workItem from="1588949565052" duration="2000" />
+      <workItem from="1589115649228" duration="541000" />
     </task>
     <servers />
   </component>
@@ -187,11 +213,15 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="396" y="23" width="673" height="876" key="#PHP/0.23.1440.877@0.23.1440.877" timestamp="1584613621878" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587059091604">
+    <state x="307" y="123" key="#Servers" timestamp="1589116228385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="307" y="123" key="#Servers/0.23.1440.877@0.23.1440.877" timestamp="1589116228385" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589116231572">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584616565104" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1587059091604" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1589116231572" />
     <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584710034353">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -213,30 +243,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="250" height="195" key="DatabaseViewActions_Filter/0.23.1440.877@0.23.1440.877" timestamp="1586937709014" />
-    <state width="958" height="198" key="GridCell.Tab.0.bottom" timestamp="1587495053088">
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom" timestamp="1589115895969">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
     <state width="958" height="199" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
-    <state width="958" height="198" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1587495053088" />
-    <state width="958" height="198" key="GridCell.Tab.0.center" timestamp="1587495053087">
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589115895969" />
+    <state width="1398" height="114" key="GridCell.Tab.0.center" timestamp="1589115895969">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584647858846" />
     <state width="958" height="199" key="GridCell.Tab.0.center/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
-    <state width="958" height="198" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1587495053087" />
-    <state width="958" height="198" key="GridCell.Tab.0.left" timestamp="1587495053087">
+    <state width="1398" height="114" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589115895969" />
+    <state width="1398" height="114" key="GridCell.Tab.0.left" timestamp="1589115895968">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584647858845" />
     <state width="958" height="199" key="GridCell.Tab.0.left/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396341" />
-    <state width="958" height="198" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1587495053086" />
-    <state width="958" height="198" key="GridCell.Tab.0.right" timestamp="1587495053088">
+    <state width="1398" height="114" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589115895968" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right" timestamp="1589115895969">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1398" height="114" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584647858847" />
     <state width="958" height="199" key="GridCell.Tab.0.right/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587472396343" />
-    <state width="958" height="198" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1587495053088" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589115895969" />
     <state width="239" height="539" key="HiddenNamespacesPopup" timestamp="1585554535445">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -246,10 +276,10 @@
     </state>
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587732967628" />
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1587492607017" />
-    <state x="1532" y="-127" width="900" height="877" key="SettingsEditor" timestamp="1586870371418">
-      <screen x="1440" y="-127" width="1680" height="1027" />
+    <state x="79" y="23" width="900" height="877" key="SettingsEditor" timestamp="1588077069070">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="79" y="23" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1586609763230" />
+    <state x="79" y="23" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1588077069070" />
     <state x="1532" y="-127" key="SettingsEditor/0.23.1440.877/1440.-127.1680.1027@1440.-127.1680.1027" timestamp="1586870371418" />
     <state x="79" y="23" width="900" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1585753745938" />
     <state width="503" height="445" key="SwitcherDM" timestamp="1587498602847">
