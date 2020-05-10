@@ -22,7 +22,7 @@ ob_start(); ?>
             <?= $sensorsChoice ?>
 
 
-            <a href=""><input type="button" value="Exécuter le test"> </a>
+            <a href="index.php?action=executeTest"><input type="button" value="Exécuter le test"> </a>
         </article>
     </section>
 <?php  $content = ob_get_clean();

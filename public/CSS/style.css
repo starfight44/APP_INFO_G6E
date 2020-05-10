@@ -12,9 +12,6 @@
     .connect{
         left: 40px;
     }
-
-
-
 }
 
 /*style principal du site (page main)*/
@@ -241,7 +238,9 @@ input[type=button] {
     font-weight: bold;
     margin: 5px;
 
+
 }
+
 
 input[type=button]:hover {
     background-color: white;
@@ -396,16 +395,38 @@ select{
     border: solid 1px #ff4a4d;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
+}
+.result_data_small{
+    position: relative;
+    width:250px;
+    height: 100px;
+    padding: 10px;
+    margin: 20px;
+    border: solid 1px #ff4a4d;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
-#soundRec{
+#large_weigth{
     width:560px;
+}
+.result_data_large{
+    position: relative;
+    width:560px;
+    height: 100px;
+    padding: 10px;
+    margin: 20px;
+    border: solid 1px #ff4a4d;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
 h5{
     color: #ff4a4d;
-    font-size: xxx-large;
+    font-size: 2.5em;
     font-weight: bold;
     margin: 0;
     position: absolute;
@@ -413,8 +434,12 @@ h5{
 }
 
 h6{
-    font-size: x-large;
+    font-size: 1.5em;
     color: #ff7689;
     margin: 0;
 
+}
+
+#hidden{
+    border: white 1px solid;
 }

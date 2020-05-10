@@ -4,23 +4,7 @@ function printUserInformations(){
     if(isLoginOk()){
         require('model/modelUser.php');
         $donnees = getUserInfos($_SESSION['ID']);
-        ob_start();
-        echo '<section>
-               <h3>Mes informations : </h3>
-               <article>
-               <a href="index.php?action=modifyUserInformations"><input type="button" value="Modifier mes informations"> </a>
-               <table>';
-
-        foreach($donnees as $key => $value) {
-            echo '<tr>
-                    <th>' . $key . ' : </th><td>' . $value .'</td>
-                    </tr>';
-        }
-        echo '</table>
-                </article>
-                </section>';
-        $content = ob_get_clean();
-        require('view/userSpaceView.php');
+        require('view/informationsView.php');
     }
     else{
         $warning_message = 'Reconnectez vous';
@@ -169,6 +153,31 @@ function newUserMessage(){
         require('model/modelUser.php');
         sendMessage($_POST['message'],$_SESSION['ID']);
         header('Location:index.php?action=userChat');
+    }
+    else{
+        $warning_message = 'Reconnectez vous';
+        require('view/connectView.php');
+    }
+}
+
+function executeTest(){
+    if(isLoginOk()){
+        require('model/modelUser.php');
+        in_array(1,getSensorsChoiceID($_SESSION['ID'])) ? $cardiacFrequency=150 : $cardiacFrequency=null ;
+        in_array(2,getSensorsChoiceID($_SESSION['ID'])) ? $temperature = 37 : $temperature = null;
+        in_array(3,getSensorsChoiceID($_SESSION['ID'])) ? $visualStimulus=100 : $visualStimulus =null;
+        in_array(4,getSensorsChoiceID($_SESSION['ID'])) ? $soundStimulus = 100 : $soundStimulus =null;
+        if(in_array(5,getSensorsChoiceID($_SESSION['ID']))){
+            $minFrequencyRecognition=20;
+            $maxFrequencyRecognition=20000;
+        }
+        else{
+            $minFrequencyRecognition=null;
+            $maxFrequencyRecognition=null;
+        }
+
+        addToResults($_SESSION['ID'],$cardiacFrequency,$temperature,$visualStimulus,$soundStimulus,$minFrequencyRecognition,$maxFrequencyRecognition);
+        header('Location:index.php?action=userHistory');
     }
     else{
         $warning_message = 'Reconnectez vous';

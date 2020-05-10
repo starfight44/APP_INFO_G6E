@@ -118,3 +118,17 @@ function sendMessage($message,$id_user){
     $requete->execute(array($message,$id_user,'user'));
 
 }
+
+function addToResults($id_user,$cardiacFrequency=NULL,$temperature=NULL,$visualStimulus=NULL,$soundStimulus=NULL,$minFrequencyRecognition=NULL,$maxFrequencyRecognition=NULL){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('INSERT INTO `results` (`id`, `id_user`, `added_date`, `cardiac_frequency`, `temperature`, `visual_stimulus`, `sound_stimulus`, `min_frequency_recognition`, `max_frequency_recognition`) 
+                            VALUES (NULL,?,NOW(), ?, ?, ?, ?, ?, ?)');
+    $requete->execute(array($id_user,$cardiacFrequency,$temperature,$visualStimulus,$soundStimulus,$minFrequencyRecognition,$maxFrequencyRecognition));
+}
+
+function getSensorsChoiceID($id_user){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('SELECT id_sensor FROM sensorsChoice WHERE id_user=?');
+    $requete->execute(array($id_user));
+    return $requete->fetchALL(PDO::FETCH_COLUMN);
+}

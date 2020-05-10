@@ -117,6 +117,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'numberOfVisitors') {
         numberOfVisitors();
     }
+    elseif ($_GET['action'] == 'executeTest') {
+        executeTest();
+    }
 
 }
 else {
