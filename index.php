@@ -120,6 +120,9 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'executeTest') {
         executeTest();
     }
+    elseif ($_GET['action'] == 'resultDetails') {
+        resultDetail($_GET['id_result']);
+    }
 
 }
 else {

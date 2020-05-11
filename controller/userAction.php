@@ -119,13 +119,59 @@ function userResults(){
 
 function userHistory(){
     if(isLoginOk()){
-        require('view/historyView.php');
+            require('model/modelUser.php');
+            $donnees = getListResults($_SESSION['ID']);
+            if(count($donnees)==0){
+                $resultList = '<strong><p>Vous n\'avez réalisé aucun test, rendez vous dans la rubrique test !</p></strong>';
+            }
+            else{
+                ob_start();
+                echo '<tr>
+                    <th>N° du test</th>
+                    <th>Date</th>
+                    <th>Heure</th>
+                </tr>';
+                foreach ($donnees as $elt) {
+                    echo '<tr>
+                    <td>' . $elt['id'] . '</td> 
+                    <td>' . $elt['day'].'/'.$elt['month'].'/'.$elt['year'] . '</td> 
+                    <td>' . $elt['hour'] . '</td> 
+  
+                    <td><a href="index.php?action=resultDetails&id_result='.$elt['id'].'"><input type="button" value="Informations"></a></td>                 
+                 </tr>';
+                }
+                $resultList  = ob_get_clean();
+            }
+            require('view/historyView.php');
+        }
+        else{
+            $warning_message = 'Reconnectez vous';
+            require('view/connectView.php');
+        }
+
+    }
+
+function resultDetail($id_result){
+    if(isLoginOk()){
+        require('model/modelUser.php');
+        $donnees=getResultDetails($id_result);
+        $title = 'Résultat du '. $donnees['day'].'/'.$donnees['month'].'/'.$donnees['year'] .' à ' . $donnees['hour'] .'  ';
+
+        $cardiac_frequency = $donnees['cardiac_frequency'];
+        $temperature = $donnees['temperature'];
+        $visual_stimulus = $donnees['visual_stimulus'];
+        $sound_stimulus = $donnees['sound_stimulus'];
+        $min_frequency_recognition = $donnees['min_frequency_recognition'];
+        $max_frequency_recognition = $donnees['max_frequency_recognition'];
+        require('view/resultDetailsView.php');
     }
     else{
         $warning_message = 'Reconnectez vous';
         require('view/connectView.php');
     }
+
 }
+
 
 function printUserChat(){
     if(isLoginOk()){
@@ -177,7 +223,7 @@ function executeTest(){
         }
 
         addToResults($_SESSION['ID'],$cardiacFrequency,$temperature,$visualStimulus,$soundStimulus,$minFrequencyRecognition,$maxFrequencyRecognition);
-        header('Location:index.php?action=userHistory');
+        header('Location:index.php?action=resultDetails&id_result=-1');
     }
     else{
         $warning_message = 'Reconnectez vous';

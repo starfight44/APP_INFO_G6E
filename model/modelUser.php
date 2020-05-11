@@ -132,3 +132,26 @@ function getSensorsChoiceID($id_user){
     $requete->execute(array($id_user));
     return $requete->fetchALL(PDO::FETCH_COLUMN);
 }
+
+function getListResults($id_user){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('SELECT id,DATE_FORMAT(added_date,"%e") as day,DATE_FORMAT(added_date,"%c") as month,DATE_FORMAT(added_date,"%Y") as year,DATE_FORMAT(added_date,"%T") as hour FROM `results` WHERE `id_user` = ? ORDER BY id DESC');
+    $requete->execute(array($id_user));
+    return $requete->fetchALL(PDO::FETCH_ASSOC);
+}
+
+function getResultDetails($id_result){
+    $bdd = bddConnect();
+    if ($id_result==-1){
+        $requete = $bdd->prepare('SELECT id,DATE_FORMAT(added_date,"%e") as day,DATE_FORMAT(added_date,"%c") as month,DATE_FORMAT(added_date,"%Y") as year,DATE_FORMAT(added_date,"%T") as hour,
+                                        cardiac_frequency, temperature,visual_stimulus,sound_stimulus,min_frequency_recognition,max_frequency_recognition FROM `results` ORDER BY id DESC LIMIT 1');
+        $requete->execute(array());
+    }
+    else{$requete = $bdd->prepare('SELECT id,DATE_FORMAT(added_date,"%e") as day,DATE_FORMAT(added_date,"%c") as month,DATE_FORMAT(added_date,"%Y") as year,DATE_FORMAT(added_date,"%T") as hour,
+                                        cardiac_frequency, temperature,visual_stimulus,sound_stimulus,min_frequency_recognition,max_frequency_recognition FROM `results` WHERE `id` = ?');
+        $requete->execute(array($id_result));
+    }
+
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}

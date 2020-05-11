@@ -3,6 +3,7 @@ ob_start(); ?>
 
 
     <section>
+        <h2>Détails de vos résultats moyens sur tous vos test</h2>
         <article>
             <div id="results_container">
                 <div class="result_data">
@@ -26,7 +27,8 @@ ob_start(); ?>
                     <h5>20 - 20 000 Hertz</h5>
                 </div>
 
-            </div></article>
+            </div>
+        </article>
     </section>
 
 <?php  $content = ob_get_clean();

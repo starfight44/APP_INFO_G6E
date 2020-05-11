@@ -6,8 +6,7 @@
       <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/makeATestView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/makeATestView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/historyView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/historyView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/resultsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/resultsView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +203,7 @@
       <workItem from="1589124103730" duration="2628000" />
       <workItem from="1589128094665" duration="2440000" />
       <workItem from="1589134962561" duration="4378000" />
+      <workItem from="1589181915255" duration="5746000" />
     </task>
     <servers />
   </component>
@@ -277,9 +277,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="239" height="539" key="HiddenNamespacesPopup/0.23.1440.877@0.23.1440.877" timestamp="1585554535445" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1589129925450">
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1589184751935">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/-91.-1027.1680.1027@0.23.1440.877" timestamp="1589184751935" />
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.-127.1680.1027@0.23.1440.877" timestamp="1587732967628" />
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1589129925450" />
     <state x="79" y="23" width="900" height="877" key="SettingsEditor" timestamp="1588077069070">
