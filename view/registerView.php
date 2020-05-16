@@ -4,7 +4,7 @@
 
     <div id="registration_container"> <!-- Cadre contenant le formulaire -->
 
-        <form action="index.php?action=register" method="POST"> <!--  formulaire d'inscription  -->
+        <form action="index.php?action=register" method="POST" name="register" onsubmit="return validateForm()"> <!--  formulaire d'inscription  -->
 
             <h1>Inscription</h1>
 
@@ -279,13 +279,34 @@
             <br>
             <br>
             <a href="index.php?action=connect">J'ai déjà un compte</a>
-
-            <?php if(isset($warning_message)){ ?> <p class="warning"><?= $warning_message ?></p> <?php ;} ?>
+            <p class="warning" id="warning">
+            <?php if(isset($warning_message)){ ?> <?= $warning_message ?> <?php } ?>
+            </p>
             <input type="submit" id='submit' value="S'INSCRIRE" >
 
         </form>
     </div>
 
 <?php $formContent = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+    <script type="text/javascript">
+        function validateForm() {
+            var msg;
+            var password = document.forms["register"]["password"].value;
+            if (!password.match( /[0-9]/g) ||
+                !password.match( /[A-Z]/g) ||
+                !password.match(/[a-z]/g) ||
+                !password.match( /[^a-zA-Z\d]/g) ||
+                password.length <= 5){
+                msg = "Mot de passe trop faible, il doit contenir 1 caractère majuscule, 1 caractère minuscule, 1 chiffre,1 caractère spécial et un minimum de 5 caractères.";
+                document.getElementById("warning").innerHTML= msg;
+                document.register.password.focus() ;
+                return false;
+            }
+        }
+    </script>
+<?php $script = ob_get_clean(); ?>
 
 <?php require('formTemplate.php'); ?>

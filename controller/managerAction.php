@@ -51,24 +51,25 @@ function printUsers(){
 
 function searchUser(){
     if(isManagerLog()) {
-        require('model/modelUser.php');
-        $donnees = getUserInfos($_POST['id']);
+        require('model/modelManager.php');
+        $donnees = getUserInfosByPseudo($_POST['pseudo']);
         if(isset($donnees['Pseudo'])){
             ob_start();
+
             foreach($donnees as $key => $value) {
                 echo '<td>'. $value .'</td>';
             }
+
             $userInformations = ob_get_clean();
 
-            $_SESSION['idUser'] = $_POST['id'];
+            $_SESSION['idUser'] = $donnees['id_user'];
             require('view/managerModifyUserView.php');
         }
         else{
-            $warning_message=urlencode('utilisateur introuvable, veuillez saisir un id valide');
+            $warning_message=urlencode('utilisateur introuvable, veuillez saisir un pseudo valide');
             $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
             header($url);
         }
-
     }
     else{
             $warning_message = 'Reconnectez vous';
@@ -308,7 +309,7 @@ function numberOfVisitors(){
     if(isManagerLog()){
         require('model/modelManager.php');
         $nbOfLogPerDay = array();
-        for($day = 0 ; $day >= -6; $day--){
+        for($day = 0 ; $day <= 6; $day++){
             array_push($nbOfLogPerDay,getNumberOfLogsPerDay($day)['tot']);
         }
 

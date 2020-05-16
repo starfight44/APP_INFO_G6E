@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/managerAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/userAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/modelManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/modelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modelUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/historyView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/historyView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/formTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/formTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerListUsersView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerListUsersView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/managerModifyUserView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/managerModifyUserView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/resultDetailsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/resultDetailsView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/resultsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/resultsView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +208,12 @@
       <workItem from="1589124103730" duration="2628000" />
       <workItem from="1589128094665" duration="2440000" />
       <workItem from="1589134962561" duration="4378000" />
-      <workItem from="1589181915255" duration="5746000" />
+      <workItem from="1589181915255" duration="6742000" />
+      <workItem from="1589203320053" duration="3508000" />
+      <workItem from="1589375440891" duration="273000" />
+      <workItem from="1589634053604" duration="2023000" />
+      <workItem from="1589636617791" duration="208000" />
+      <workItem from="1589636855096" duration="32000" />
     </task>
     <servers />
   </component>
@@ -223,11 +233,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="307" y="123" key="#Servers/0.23.1440.877@0.23.1440.877" timestamp="1589116228385" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589116231572">
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589206459070">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1584616565104" />
-    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1589116231572" />
+    <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1589206459070" />
     <state x="440" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584710034353">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -4,7 +4,7 @@
 
     <article>
         <form action="index.php?action=searchUser" method="POST">
-            <input type="text" placeholder="id utilisateur" name="id" required>
+            <input type="text" placeholder="pseudo utilisateur" name="pseudo" required>
             <input type="submit" id='submit' value='Rechercher' >
         </form>
         <?php if(isset($_GET['message'])){ ?> <p class="warning"> <?php echo $_GET['message'];?></p> <?php ;} ?>

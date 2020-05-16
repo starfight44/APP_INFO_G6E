@@ -10,7 +10,7 @@ ob_start(); ?>
                     <div class="result_data">
                         <h6>Fréquence cardiaque</h6>
                         <h5><?php if(isset($cardiac_frequency)) {
-                                echo $cardiac_frequency . 'Bpm';
+                                echo $cardiac_frequency . ' Bpm';
                              }else{
                                  echo 'X';
                             }?></h5>
@@ -18,7 +18,7 @@ ob_start(); ?>
                     <div class="result_data">
                         <h6>Température</h6>
                         <h5><?php if(isset($temperature)) {
-                                echo $temperature . '°C';
+                                echo $temperature . ' °C';
                             }else{
                                 echo 'X';
                             }?> </h5>
@@ -26,7 +26,7 @@ ob_start(); ?>
                     <div class="result_data">
                         <h6>Réaction à un stimulus visuel</h6>
                         <h5><?php if(isset($visual_stimulus)) {
-                                echo $visual_stimulus . 'ns';
+                                echo $visual_stimulus . ' ns';
                             }else{
                                 echo 'X';
                             }?></h5>
@@ -34,7 +34,7 @@ ob_start(); ?>
                     <div class="result_data">
                         <h6>Réaction à un stimulus sonore</h6>
                         <h5><?php if(isset($sound_stimulus)) {
-                                echo $sound_stimulus . 'ns';
+                                echo $sound_stimulus . ' ns';
                             }else{
                                 echo 'X';
                             }?></h5>

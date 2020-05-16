@@ -101,6 +101,14 @@ function getUserInfos($ID){
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
 
+function getUserInfosByPseudo($pseudo){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('SELECT ID id_user,pseudo Pseudo,lastName Nom ,firstName Prénom,email Mail,height Taille,weight Poids,sex Sexe,country Pays FROM users WHERE pseudo=? AND active_account=1');
+    $requete->execute(array($pseudo));
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
 function getFAQ(){
     $bdd = bddConnect();
     $requete = $bdd->prepare('SELECT id,question,response FROM FAQ ORDER BY id DESC');

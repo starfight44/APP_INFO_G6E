@@ -108,6 +108,13 @@ function addSensorChoice(){
 
 function userResults(){
     if(isLoginOk()){
+        require('model/modelUser.php');
+        $averagecCardiacFrequency = round(getAverageResult($_SESSION['ID'],'cardiac_frequency')['average'],'0');
+        $averageTemperture = round(getAverageResult($_SESSION['ID'],'temperature')['average'],'1');
+        $averageVisualStimulus = round(getAverageResult($_SESSION['ID'],'visual_stimulus')['average'],'0');
+        $averageSoundStimulus = round(getAverageResult($_SESSION['ID'],'sound_stimulus')['average'],'0');
+        $averageMinFrequency = round(getAverageResult($_SESSION['ID'],'min_frequency_recognition')['average'],'0');
+        $averageMaxFrequency = round(getAverageResult($_SESSION['ID'],'max_frequency_recognition')['average'],'0');
         require('view/resultsView.php');
     }
     else{
@@ -127,13 +134,15 @@ function userHistory(){
             else{
                 ob_start();
                 echo '<tr>
-                    <th>N° du test</th>
+                   
                     <th>Date</th>
                     <th>Heure</th>
                 </tr>';
+                $test_nb=0;
                 foreach ($donnees as $elt) {
+                    $test_nb ++;
                     echo '<tr>
-                    <td>' . $elt['id'] . '</td> 
+                  
                     <td>' . $elt['day'].'/'.$elt['month'].'/'.$elt['year'] . '</td> 
                     <td>' . $elt['hour'] . '</td> 
   
@@ -209,13 +218,13 @@ function newUserMessage(){
 function executeTest(){
     if(isLoginOk()){
         require('model/modelUser.php');
-        in_array(1,getSensorsChoiceID($_SESSION['ID'])) ? $cardiacFrequency=150 : $cardiacFrequency=null ;
-        in_array(2,getSensorsChoiceID($_SESSION['ID'])) ? $temperature = 37 : $temperature = null;
-        in_array(3,getSensorsChoiceID($_SESSION['ID'])) ? $visualStimulus=100 : $visualStimulus =null;
-        in_array(4,getSensorsChoiceID($_SESSION['ID'])) ? $soundStimulus = 100 : $soundStimulus =null;
+        in_array(1,getSensorsChoiceID($_SESSION['ID'])) ? $cardiacFrequency=rand ( 100 , 200 ) : $cardiacFrequency=null ;
+        in_array(2,getSensorsChoiceID($_SESSION['ID'])) ? $temperature = (rand ( 350 , 400))/10 : $temperature = null;
+        in_array(3,getSensorsChoiceID($_SESSION['ID'])) ? $visualStimulus=rand ( 200 , 300): $visualStimulus =null;
+        in_array(4,getSensorsChoiceID($_SESSION['ID'])) ? $soundStimulus = rand ( 200 , 300) : $soundStimulus =null;
         if(in_array(5,getSensorsChoiceID($_SESSION['ID']))){
-            $minFrequencyRecognition=20;
-            $maxFrequencyRecognition=20000;
+            $minFrequencyRecognition=rand ( 20 , 5000 );
+            $maxFrequencyRecognition=rand ( 15000 , 2000 );
         }
         else{
             $minFrequencyRecognition=null;

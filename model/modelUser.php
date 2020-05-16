@@ -155,3 +155,11 @@ function getResultDetails($id_result){
 
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
+
+function getAverageResult($id_user,$sensor){
+    $bdd = bddConnect();
+
+    $requete = $bdd->prepare('SELECT AVG('.$sensor.') as average FROM results WHERE id_user=?');
+    $requete->execute(array($id_user));
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
