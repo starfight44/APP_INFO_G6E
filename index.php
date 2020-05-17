@@ -1,6 +1,6 @@
 <?php
 require('controller/visitorAction.php');
-require('controller/UserAction.php');
+require('controller/userAction.php');
 require('controller/managerAction.php');
 
 if (isset($_GET['action'])) {

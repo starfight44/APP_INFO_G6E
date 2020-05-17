@@ -56,6 +56,12 @@ function deleteAccount($id){
     $bdd = bddConnect();
     $requete = $bdd->prepare('DELETE FROM users WHERE ID=?');
     $requete->execute(array($id));
+    $requete = $bdd->prepare('DELETE FROM message WHERE id_user=?');
+    $requete->execute(array($id));
+    $requete = $bdd->prepare('DELETE FROM results WHERE id_user=?');
+    $requete->execute(array($id));
+    $requete = $bdd->prepare('DELETE FROM sensorsChoice WHERE id_user=?');
+    $requete->execute(array($id));
 }
 
 function resetPassword($id,$newPassword){
