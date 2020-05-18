@@ -159,7 +159,19 @@ function activateAccount(){
     if(isManagerLog()) {
         $id_user = $_GET['id_user'];
         require('model/modelManager.php');
+        require('controller/mail.php');
         activateUserAccount($id_user);
+        $donnees = getUserInfos($id_user);
+        $subject="Votre compte Infinite Measures est activé !";
+        $body="
+        Bonjour ".$donnees['Pseudo'].", <br>
+        Votre compte Infinite Measures est enfin activé ! <br>
+        Rendez vous sur le site Infinite Measures pour accéder à votre espace personnel.
+        <br>
+        <br>
+        cordialement,<br>
+        L'équipe Infinite Measures";
+        sendMail($donnees['Mail'],$subject,$body);
         header('Location:index.php?action=listNonActivatedAccounts');
 
     }else{

@@ -42,8 +42,12 @@ function contact(){
         require('view/contactView.php');
     }
     else{/*sinon on envoie le mail*/
-        if(sendMailTo("")){
-            require('view/homeView.php');
+        require ('controller/mail.php');
+        $mailDestination = 'infinite.measures.g6e@gmail.com';
+        $subject = 'Contact / '. $_POST['email'];
+        $body= $_POST['message'];
+        if(sendMail($mailDestination,$subject,$body)){
+            header('Location: index.php');
         }
         else{
             $warning_message='il y a eu une erreur veuillez réessayer !';
@@ -52,9 +56,6 @@ function contact(){
     }
 }
 
-function sendMailTo($mail){
-    return false;
-}
 
 
 function connect(){
@@ -107,8 +108,20 @@ function register(){
         }
         else {
             setUserInfos(htmlspecialchars($_POST['pseudo']), htmlspecialchars($_POST['lastName']), htmlspecialchars($_POST['firstName']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']), htmlspecialchars($_POST['height']), htmlspecialchars($_POST['weight']), htmlspecialchars($_POST['sex']), htmlspecialchars($_POST['country']));
-            sendMailTo("");
-            $warning_message = 'inscription réalisée avec succès vous devez maintenant attendre qu\'un manager valide votre compte';
+            require('controller/mail.php');
+            $subject ='Validation compte utilisateur / Pseudo : '.$_POST['pseudo'];
+            $body="Un <strong>nouvel utilisateur</strong> s'est inscrit sur le site Infinite Measures, Veuillez confirmer son compte.
+            <br>
+            <strong>Informations utilisateur :</strong>
+            <br>
+            <br>
+            Pseudo : ".$_POST['pseudo']."<br>
+            Nom : ".$_POST['lastName']." <br>
+            Prénom : ".$_POST['firstName']."<br>
+            Email : ".$_POST['email']."";
+            sendMail('infinite.measures.g6e@gmail.com',$subject,$body);
+            $warning_message = "inscription réalisée avec succès, vous devez maintenant attendre qu'un manager valide votre compte \n
+                                Vous recevrez un mail lorsque cette action sera réalisée !";
             require('view/connectView.php');
         }
     }

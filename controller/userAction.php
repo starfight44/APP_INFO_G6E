@@ -23,6 +23,7 @@ function modifyUserInformations(){
 
                     if (strlen($_POST['newPassword']) > 0) {
                         updatePassword($_POST['newPassword'], $connectionDatas['ID']);
+                        updateManagerPassword($_POST['newPassword'], $userDatas['Mail']);
                     }
 
                     updateUserInfos($_POST['lastName'], $_POST['firstName'], $_POST['height'], $_POST['weight'], $connectionDatas['ID']);

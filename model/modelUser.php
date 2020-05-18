@@ -163,3 +163,9 @@ function getAverageResult($id_user,$sensor){
     $requete->execute(array($id_user));
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
+
+function updateManagerPassword($newPassword, $mail){
+    $bdd = bddConnect();
+    $requete = $bdd->prepare('UPDATE manager SET password=? WHERE email=?');
+    $requete->execute(array(password_hash($newPassword,PASSWORD_DEFAULT),$mail));
+}
