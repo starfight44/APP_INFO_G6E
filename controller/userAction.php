@@ -233,12 +233,21 @@ function executeTest(){
         }
 
         addToResults($_SESSION['ID'],$cardiacFrequency,$temperature,$visualStimulus,$soundStimulus,$minFrequencyRecognition,$maxFrequencyRecognition);
-        header('Location:index.php?action=resultDetails&id_result=-1');
+        header('Location:index.php?action=loadTest');
     }
     else{
         $warning_message = 'Reconnectez vous';
         require('view/connectView.php');
     }
+}
+
+function loadTest(){
+    if(isLoginOk()){
+        require ('view/executingTestView.php');
+}else{
+    $warning_message = 'Reconnectez vous';
+    require('view/connectView.php');
+}
 }
 
 

@@ -123,6 +123,10 @@ if (isset($_GET['action'])) {
     elseif ($_GET['action'] == 'resultDetails') {
         resultDetail($_GET['id_result']);
     }
+    elseif ($_GET['action'] == 'loadTest') {
+        loadTest();
+    }
+
 
 }
 else {

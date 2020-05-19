@@ -7,23 +7,43 @@ ob_start(); ?>
             <div id="results_container">
                 <div class="result_data">
                     <h6>Fréquence cardiaque moyenne</h6>
-                    <h5><?= $averagecCardiacFrequency ?> Bpm</h5>
+                    <h5><?php if($averagecCardiacFrequency != 0) {
+                            echo $averagecCardiacFrequency . ' Bpm';
+                        }else{
+                            echo 'X';
+                        }?> </h5>
                 </div>
                 <div class="result_data">
                     <h6>Température moyenne</h6>
-                    <h5><?= $averageTemperture ?> °C</h5>
+                    <h5><?php if($averageTemperture != 0) {
+                            echo $averageTemperture . ' °C';
+                        }else{
+                            echo 'X';
+                        }?></h5>
                 </div>
                 <div class="result_data">
                     <h6>Stimulus visuel</h6>
-                    <h5><?= $averageVisualStimulus ?> ns</h5>
+                    <h5><?php if($averageVisualStimulus != 0) {
+                            echo $averageVisualStimulus . ' ns';
+                        }else{
+                            echo 'X';
+                        }?></h5>
                 </div>
                 <div class="result_data">
                     <h6>Stimulus sonore</h6>
-                    <h5><?= $averageSoundStimulus ?> ns</h5>
+                    <h5><?php if($averageSoundStimulus != 0) {
+                            echo $averageSoundStimulus . ' ns';
+                        }else{
+                            echo 'X';
+                        }?></h5>
                 </div>
                 <div id="large_weigth" class="result_data">
                     <h6>Reconnaissance sonore</h6>
-                    <h5><?= $averageMinFrequency ?> - <?= $averageMaxFrequency ?> Hertz</h5>
+                    <h5><?php if($averageMinFrequency != 0) {
+                            echo $averageMinFrequency .' - '.$averageMaxFrequency. ' Hertz';
+                        }else{
+                            echo 'X';
+                        }?></h5>
                 </div>
 
             </div>

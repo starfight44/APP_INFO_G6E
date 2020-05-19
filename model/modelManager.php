@@ -72,7 +72,7 @@ function resetPassword($id,$newPassword){
 
 function getNonActivatedAccounts(){
     $bdd = bddConnect();
-    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email FROM users WHERE active_account=0 ORDER BY registration_date');
+    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email FROM users WHERE active_account=0 ORDER BY registration_date DESC');
     $requete->execute();
 
     return $requete->fetchAll(PDO::FETCH_ASSOC);

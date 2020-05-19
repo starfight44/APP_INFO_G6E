@@ -47,7 +47,10 @@ function contact(){
         $subject = 'Contact / '. $_POST['email'];
         $body= $_POST['message'];
         if(sendMail($mailDestination,$subject,$body)){
-            header('Location: index.php');
+            $warning_message="Votre message à bien été envoyé !
+                                    <br>
+                                    <a href=\"index.php\">Retrourner à l'acceuil</a>";
+            require('view/contactView.php');
         }
         else{
             $warning_message='il y a eu une erreur veuillez réessayer !';
