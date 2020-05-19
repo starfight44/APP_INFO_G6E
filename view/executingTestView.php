@@ -47,7 +47,7 @@
         <h1>Veuillez patientez pendant l'éxécution du test.</h1>
     </div>
     <div class="gif">
-    <img src="public/images/loading.gif" width="50px">
+    <img src="public/images/loading.gif" width="50px" height="50px">
     </div>
 
 </div>
