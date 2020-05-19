@@ -49,7 +49,7 @@ function contact(){
         if(sendMail($mailDestination,$subject,$body)){
             $warning_message="Votre message à bien été envoyé !
                                     <br>
-                                    <a href=\"index.php\">Retrourner à l'acceuil</a>";
+                                    <a href=\"index.php\">Retourner à l'acceuil</a>";
             require('view/contactView.php');
         }
         else{
