@@ -4,7 +4,7 @@
 
     <div id="registration_container"> <!-- Cadre contenant le formulaire -->
 
-        <form action="index.php?action=modifyUserInformations" method="POST"> <!--  formulaire d'inscription  -->
+        <form onsubmit="return validateForm()" action="index.php?action=modifyUserInformations" method="POST" name="modify"> <!--  formulaire d'inscription  -->
 
             <h1>Modifier mes informations : </h1>
 
@@ -28,13 +28,37 @@
 
             <br>
             <br>
-            <?php if(isset($warning_message)){ ?> <p class="warning"><?= $warning_message ?></p> <?php ;} ?>
-
-            <input type="submit" id='submit' value="Confirmer les modifications" >
-
+            <p class="warning" id="warning">
+            <?php if(isset($warning_message)){ ?> <?= $warning_message ?><?php ;} ?>
+            </p>
+            <input type="submit" id='submit' value="Confirmer les modifications">
         </form>
     </div>
 
 <?php $formContent = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+    <script type="text/javascript">
+        function validateForm(){
+            var msg;
+            var password = document.forms["modify"]["newPassword"].value;
+
+            if ((!password.match( /[0-9]/g) ||
+                !password.match( /[A-Z]/g) ||
+                !password.match(/[a-z]/g) ||
+                !password.match( /[^a-zA-Z\d]/g) ||
+                password.length <= 5) && password.length>0){
+                msg = "Mot de passe trop faible, il doit contenir 1 caractère majuscule, 1 caractère minuscule, 1 chiffre,1 caractère spécial et un minimum de 5 caractères.";
+                document.getElementById("warning").innerHTML= msg;
+
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+<?php $script = ob_get_clean(); ?>
 
 <?php require('formTemplate.php'); ?>
