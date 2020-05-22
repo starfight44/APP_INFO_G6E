@@ -170,8 +170,8 @@ footer
 #questionArticle .question{
     font-style: italic;
     color: #ff7689;
-    width: max-content;
     margin-top: 3%;
+    width: auto;
 }
 #questionArticle .question:hover{
     border-bottom: #ff7689 solid 0.1em;

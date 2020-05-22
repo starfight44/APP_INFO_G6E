@@ -94,8 +94,22 @@ else{
 function resetUserPassword(){
     if(isManagerLog()) {
         require("model/modelManager.php");
+        require("controller/mail.php");
         $newPassword = generate_password();
-        $warning_message=urlencode('Nouveau mot de passe lié à l\'ID utilisateur ').$_SESSION['idUser'].urlencode(' => ').$newPassword;
+        $subject="Réinitialisation de votre mote de passe Infinite Measures";
+        $body="
+        Bonjour,<br>
+        suite à votre demande, votre mot de passe d'accès à votre compte Infinite Measures à bien été modifié.
+        <br>
+        <br>
+        <strong>Nouveau mot de passe : </strong>".$newPassword." 
+        <br>
+        <br>
+        cordialement,<br>
+        Infinite Measures";
+        sendMail(getUserInfos($_SESSION['idUser'])['Mail'],$subject,$body);
+
+        $warning_message=urlencode('Nouveau mot de passe lié à l\'ID utilisateur ').$_SESSION['idUser'].' bien réinitialisé';
         $newPassword = password_hash($newPassword,PASSWORD_DEFAULT);
         resetPassword($_SESSION['idUser'],$newPassword);
         $url = 'Location:index.php?action=printUsers&message=' . $warning_message;

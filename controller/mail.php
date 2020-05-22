@@ -36,7 +36,7 @@ function sendMail($mailDestination,$subject,$body){
 
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = $subject;
+        $mail->Subject = utf8_decode($subject);
         $mail->Body    = $body;
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
