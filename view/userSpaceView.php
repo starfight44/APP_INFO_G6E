@@ -21,7 +21,7 @@
 <?php $nav = ob_get_clean();?>
 
 
-<?php $footer_link ='index.php?action=CGU'; ?>
-<?php $label_footer_link ="conditions générales d'utilisation"; ?>
+<?php $footer_link ='index.php?action=contact'; ?>
+<?php $label_footer_link ="Nous contacter"; ?>
 
 <?php include('mainTemplate.php'); ?>
