@@ -1,0 +1,29 @@
+<?php
+ob_start(); ?>
+
+    <section><h2>Make a test :</h2></section>
+    <section>
+            <p align="center" class="warning"><strong>INSTRUCTIONS :</strong> click on a test to delete it<br>Add the tests in the order in which you want to run them</p>
+            <br><br>
+        <div id="addTest">
+            <form action="index.php?action=addTest" method="POST">
+
+                <select name="id_sensor" id ="id_sensor">
+                    <option value="1">Cardiac sensor</option>
+                    <option value="2">Temperature sensor</option>
+                    <option value="3">Visual stimulus</option>
+                    <option value="4">Sound stimulus</option>
+                    <option value="5">Sound recognition</option>
+                </select>
+                <input type="submit" id='submit' value='Add' >
+            </form>
+        </div>
+
+            <?= $sensorsChoice ?>
+
+
+            <a href="index.php?action=executeTest"><input type="button" value="Execute the test"> </a>
+        </article>
+    </section>
+<?php  $content = ob_get_clean();
+require('view/userSpaceView.php') ; ?>

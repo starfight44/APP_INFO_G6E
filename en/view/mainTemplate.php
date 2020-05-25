@@ -23,7 +23,7 @@
 
 <footer>
     <div id="social">
-        <p><strong>Nos réseaux sociaux : </strong></p>
+        <p><strong>Our social networks : </strong></p>
         <a href="https://www.facebook.com/InfiniteMeasuresFr/"><img src="public/images/facebook.png" class="socialLogo"></a>
         <a href="https://www.instagram.com/infinite_measures/"><img src="public/images/instagram.png" class="socialLogo"></a>
     </div>

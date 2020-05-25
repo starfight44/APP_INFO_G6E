@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6b0f8162-6d1e-4575-bccb-03826d6d54d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/homeUserView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/homeUserView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/CSS/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/executingTestView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/executingTestView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/informationsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/informationsView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mainTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mainTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/resultDetailsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/resultDetailsView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/userSpaceView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/userSpaceView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +230,9 @@
       <workItem from="1589891876780" duration="1500000" />
       <workItem from="1589894527986" duration="361000" />
       <workItem from="1589908382884" duration="694000" />
-      <workItem from="1590166706659" duration="1892000" />
+      <workItem from="1590166706659" duration="2476000" />
+      <workItem from="1590221647728" duration="1629000" />
+      <workItem from="1590427654168" duration="964000" />
     </task>
     <servers />
   </component>

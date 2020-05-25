@@ -1,0 +1,117 @@
+/*style des pages avec formulaires (connexion, inscription, contact)*/
+@media all and (min-width: 900px)
+{
+    body
+    {
+        background-image:url(formBackground.png);
+    }
+}
+    body{
+    font-family: Avenir, sans-serif;
+
+
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100%;
+    background-attachment:fixed;
+}
+
+.warning{
+    color: red;
+    text-align: center;
+}
+
+#main_container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo
+{
+    position: sticky;
+    top: 2%;
+    width: 12em;
+}
+
+#registration_container{
+    width:500px;
+    margin-right: 6em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#connection_container{
+
+    width:400px;
+    margin-right: 10em;
+    margin-bottom: 2em;
+    margin-top: 10em;
+
+}
+
+#contact_container{
+    width:500px;
+    margin-right: 6em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+
+form{
+    width: 100%;
+    margin: 0;
+    margin-top: 5%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+
+#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] ,input[type=number], select, input[type=email],textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #ff4a4d;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    margin-top: 5%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: #ff707f;
+    border: 1px solid #ff4a4d;
+}
+
+a
+{
+    text-decoration: none;
+    margin: 2%;
+}
+
+#manager{
+    position: absolute;
+    bottom: 10px; left: 10px;
+}

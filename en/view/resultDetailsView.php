@@ -8,7 +8,7 @@ ob_start(); ?>
             <article>
                 <div id="results_container">
                     <div class="result_data">
-                        <h6>Fréquence cardiaque</h6>
+                        <h6>Cardiac frequency</h6>
                         <h5><?php if(isset($cardiac_frequency)) {
                                 echo $cardiac_frequency . ' Bpm';
                              }else{
@@ -16,7 +16,7 @@ ob_start(); ?>
                             }?></h5>
                     </div>
                     <div class="result_data">
-                        <h6>Température</h6>
+                        <h6>Temperature</h6>
                         <h5><?php if(isset($temperature)) {
                                 echo $temperature . ' °C';
                             }else{
@@ -24,7 +24,7 @@ ob_start(); ?>
                             }?> </h5>
                     </div>
                     <div class="result_data">
-                        <h6>Réaction à un stimulus visuel</h6>
+                        <h6>Reaction to a visual stimulus</h6>
                         <h5><?php if(isset($visual_stimulus)) {
                                 echo $visual_stimulus . ' ns';
                             }else{
@@ -32,7 +32,7 @@ ob_start(); ?>
                             }?></h5>
                     </div>
                     <div class="result_data">
-                        <h6>Réaction à un stimulus sonore</h6>
+                        <h6>Reaction to a sound stimulus</h6>
                         <h5><?php if(isset($sound_stimulus)) {
                                 echo $sound_stimulus . ' ns';
                             }else{
@@ -40,7 +40,7 @@ ob_start(); ?>
                             }?></h5>
                     </div>
                     <div id="large_weigth" class="result_data">
-                        <h6>Intervalle de reconnaissance sonore</h6>
+                        <h6>Sound recognition interval</h6>
                         <h5><?php if(isset($min_frequency_recognition)) {
                                 echo $min_frequency_recognition .' - '.$max_frequency_recognition. ' Hertz';
                             }else{

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exécution du test</title>
+    <title>test execution</title>
     <script type='text/javascript'>
         setTimeout(function(){self.location.href="index.php?action=resultDetails&id_result=-1"},4000)
     </script>
@@ -44,7 +44,7 @@
 <body>
 <div class="loader">
     <div class="message">
-        <h1>Veuillez patienter pendant l'éxécution du test.</h1>
+        <h1>Please wait while the test runs.</h1>
     </div>
     <div class="gif">
     <img src="public/images/loading.gif" width="50px" height="50px">

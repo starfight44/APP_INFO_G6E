@@ -10,19 +10,19 @@ ob_start(); ?>
                     <h5><?= $donnees['Pseudo'] ?></h5>
                 </div>
                 <div class="result_data_small">
-                    <h6>Prénom</h6>
+                    <h6>First name</h6>
                     <h5><?= $donnees['Prénom'] ?></h5>
                 </div>
                 <div class="result_data_small">
-                    <h6>Nom</h6>
+                    <h6>Last name</h6>
                     <h5><?= $donnees['Nom'] ?></h5>
                 </div>
                 <div class="result_data_small">
-                    <h6>Sexe</h6>
+                    <h6>Sex</h6>
                     <h5><?= $donnees['Sexe'] ?></h5>
                 </div>
                 <div class="result_data_large">
-                    <h6>Pays</h6>
+                    <h6>Country</h6>
                     <h5><?= $donnees['Pays'] ?></h5>
                 </div>
 
@@ -32,16 +32,16 @@ ob_start(); ?>
                 </div>
 
                 <div class="result_data_small">
-                    <h6>Taille</h6>
+                    <h6>Heigth</h6>
                     <h5><?= $donnees['Taille'] ?> cm</h5>
                 </div>
                 <div class="result_data_small">
-                    <h6>Poids</h6>
+                    <h6>Weigth</h6>
                     <h5><?= $donnees['Poids'] ?> Kg</h5>
                 </div>
                 <div class="result_data_small_without_border">
                     <h6></h6>
-                    <a href="index.php?action=modifyUserInformations"><h6>Modifier mes informations</h6></a>
+                    <a href="index.php?action=modifyUserInformations"><h6>Modify my informations</h6></a>
                 </div>
 
             </div>
