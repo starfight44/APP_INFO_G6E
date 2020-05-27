@@ -1,12 +1,12 @@
 <?php ob_start(); ?>
 <section>
-    <h2>Gestion de la F.A.Q</h2>
+    <h2>Management of the F.A.Q</h2>
     <article>
 
     <form action="index.php?action=addQuestion" method="POST" >
             <textarea id="FAQQuestion" name="question" placeholder="Question" required></textarea>
-            <textarea id="FAQResponse" name="response" placeholder="Réponse" required></textarea>
-        <input type="submit" id='submit' value='Ajouter à la FAQ' onclick="return(confirm('Voulez vous ajouter cette question à la F.A.Q. ?'))">
+            <textarea id="FAQResponse" name="response" placeholder="Response" required></textarea>
+        <input type="submit" id='submit' value='Add to FAQ' onclick="return(confirm('Do you want to add this question to the F.A.Q.?'))">
     </form>
 
         <table>

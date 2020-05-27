@@ -20,7 +20,7 @@ function addVisitor(){
 
 function getNumberOfLogsPerDay($daysInterval){ //$daysInterval peut être égal a -1 ... -2 etc et ce qui correspond au nombre de jours que l'on veut retrancher par rapport à la date actuelle
     $bdd = bddConnect();
-    $req = $bdd->prepare('SELECT COUNT(*) as tot FROM `visitor` WHERE DAY(DATE_SUB(NOW(),INTERVAL ? DAY))=DAY(date_of_visit)');
+    $req = $bdd->prepare('SELECT COUNT(*) as tot FROM `visitor` WHERE DATE(DATE_SUB(NOW(),INTERVAL ? DAY))=DATE(date_of_visit)');
     $req->execute(array($daysInterval));
     return $req->fetch(PDO::FETCH_ASSOC);
 }
