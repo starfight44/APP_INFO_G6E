@@ -292,7 +292,7 @@ function goToChat($id_user){
         ob_start();
         foreach($donnees as $elt) {
             echo '<h4';
-            if($elt['account_type']=='manager'){echo ' id="manager">Manager';}else{echo ' id=user>Utilisateur';}
+            if($elt['account_type']=='manager'){echo ' id="manager">Manager';}else{echo ' id=user>User';}
             echo '</h4>
                     <p id="content">'.$elt['content'].'</p>';
         }

@@ -30,4 +30,6 @@ ob_start(); ?>
         </article>
     </section>
 <?php  $content = ob_get_clean();
+
+
 require('view/userSpaceView.php') ; ?>

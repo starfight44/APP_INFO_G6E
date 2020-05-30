@@ -23,7 +23,7 @@ ob_start(); ?>
             <?= $sensorsChoice ?>
         </div>
 
-        <div class="button_center">
+        <div class="button_center" id="scroll">
             <a href="index.php?action=executeTest"><input type="button" value="Exécuter le test"> </a>
 
         </div>

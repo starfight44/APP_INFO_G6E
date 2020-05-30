@@ -2,7 +2,7 @@
 ob_start(); ?>
 
     <section>
-        <a href="index.php?action=userHistory"><input type="button" value="Historique des tests"></a>
+        <a href="index.php?action=userHistory"><input type="button" value="Test history"></a>
         <article>
             <h2><?= $title ?></h2>
             <article>
