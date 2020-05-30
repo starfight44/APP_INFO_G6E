@@ -256,7 +256,7 @@ function managerChatChoice(){
         require('model/modelManager.php');
         $donnees = getActiveChats();
         if(count($donnees)==0){
-            $userChatList = '<strong><p>There are no active cats</p></strong>';
+            $userChatList = '<strong><p>There are no active chats</p></strong>';
         }
         else{
             ob_start();
