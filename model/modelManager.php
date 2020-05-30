@@ -46,7 +46,7 @@ function getManagerConnectionInfos($email){
 
 function getUsersList(){
     $bdd = bddConnect();
-    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email,height,weight,sex,country,registration_date FROM users WHERE active_account=1');
+    $requete = $bdd->prepare('SELECT ID,pseudo,firstName,lastName,email,height,weight,sex,country,registration_date FROM users WHERE active_account=1 ORDER BY ID DESC');
     $requete->execute();
 
     return $requete->fetchAll(PDO::FETCH_ASSOC);

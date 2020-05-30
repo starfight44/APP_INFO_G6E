@@ -1,17 +1,17 @@
 <!-- contenu de la page principale utilisant template.php -->
-<?php $title = 'Espace manager'; ?>
+<?php $title = 'Manager space'; ?>
 
 <?php ob_start(); ?>  <!-- Menu de la page info utilisateur -->
 <nav>
     <ul id="navigation">
 
-        <li><a href="index.php?action=printUsers" >Utilisateurs</a></li>
-        <li><a href="index.php?action=listNonActivatedAccounts" >Activer des comptes</a></li>
+        <li><a href="index.php?action=printUsers" >Users</a></li>
+        <li><a href="index.php?action=listNonActivatedAccounts" >Activate accounts</a></li>
         <li><a href="index.php?action=manageFAQ">F.A.Q.</a></li>
-        <li><a href="index.php?action=managerChatChoice">Messagerie</a></li>
-        <li><a href="index.php?action=numberOfVisitors">Données</a></li>
+        <li><a href="index.php?action=managerChatChoice">Chat</a></li>
+        <li><a href="index.php?action=numberOfVisitors">Datas</a></li>
         <div class ="rightLogo">
-            <li><a href="index.php?action=logout" class="connect">Déconnexion</a></li>
+            <li><a href="index.php?action=logout" class="connect">Logout</a></li>
         </div>
     </ul>
 </nav>

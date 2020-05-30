@@ -458,3 +458,26 @@ h6{
 .flag{
     margin-right: 20px;
 }
+
+.sensor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+
+.sensor a {
+    margin: 30px;
+    margin-right: 100px;
+}
+
+.numero{
+    font-size: xx-large;
+    color: #ff7689;
+}
+.button_center{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}

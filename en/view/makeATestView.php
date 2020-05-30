@@ -19,10 +19,14 @@ ob_start(); ?>
             </form>
         </div>
 
+        <div class="sensor">
             <?= $sensorsChoice ?>
+        </div>
 
-
+        <div class="button_center">
             <a href="index.php?action=executeTest"><input type="button" value="Execute the test"> </a>
+
+        </div>
         </article>
     </section>
 <?php  $content = ob_get_clean();

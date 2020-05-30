@@ -7,7 +7,7 @@
             <h1>Manager space</h1>
 
             <label><b>E-mail</b></label>
-            <input type="email" placeholder="EEnter your mailr" name="email" required>
+            <input type="email" placeholder="Enter your mail" name="email" required>
 
 
             <label><b>Password</b></label>

@@ -64,7 +64,7 @@ function makeATest(){
         $donnees = getSensorsChoice($_SESSION['ID']);
         ob_start();
         foreach($donnees as $key => $value) {
-            echo '<a href="index.php?action=removeSensor&id_sensor='.$value['id'].'"><p><strong>' . ($key + 1) . ' : </strong>' . $value['type'] .'</p></a>';
+            echo '<a href="index.php?action=removeSensor&id_sensor='.$value['id'].'"><p><strong class="numero">' . ($key + 1) . '    -    </strong><span style="font-size:40px">' . $value['type'] .'</span></p></a>';
         }
         $sensorsChoice = ob_get_clean();
         require('view/makeATestView.php');

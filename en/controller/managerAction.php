@@ -14,7 +14,7 @@ function managerConnect(){
         }
         else
         {
-            $warning_message='email ou mot de passe incorrect';
+            $warning_message='Incorrect email or password';
             require('view/managerConnectView.php');
         }
     }
@@ -44,7 +44,7 @@ function printUsers(){
         require('view/managerListUsersView.php');
     }
     else{
-            $warning_message = 'Reconnectez vous';
+            $warning_message = 'Reconnect';
             require('view/managerConnectView.php');
         }
 }
@@ -66,13 +66,13 @@ function searchUser(){
             require('view/managerModifyUserView.php');
         }
         else{
-            $warning_message=urlencode('utilisateur introuvable, veuillez saisir un pseudo valide');
+            $warning_message=urlencode('user not found, please enter a valid username');
             $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
             header($url);
         }
     }
     else{
-            $warning_message = 'Reconnectez vous';
+            $warning_message = 'Reconnect';
             require('view/managerConnectView.php');
         }
     }
@@ -81,12 +81,12 @@ function deleteUserAccount(){
     if(isManagerLog()) {
         require("model/modelManager.php");
         deleteAccount($_SESSION['idUser']);
-        $warning_message=urlencode('Profil supprimé avec succès');
+        $warning_message=urlencode('Profile successfully deleted');
         $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
         header($url);
     }
 else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -96,26 +96,26 @@ function resetUserPassword(){
         require("model/modelManager.php");
         require("controller/mail.php");
         $newPassword = generate_password();
-        $subject="Réinitialisation de votre mote de passe Infinite Measures";
+        $subject="Reset your Infinite Measures password";
         $body="
-        Bonjour,<br>
-        suite à votre demande, votre mot de passe d'accès à votre compte Infinite Measures à bien été modifié.
+        Hello,<br>
+        following your request, your password for accessing your Infinite Measures account has been changed.
         <br>
         <br>
-        <strong>Nouveau mot de passe : </strong>".$newPassword." 
+        <strong>New Password : </strong>".$newPassword." 
         <br>
         <br>
-        cordialement,<br>
+        cordially,<br>
         Infinite Measures";
         sendMail(getUserInfos($_SESSION['idUser'])['Mail'],$subject,$body);
 
-        $warning_message=urlencode('Nouveau mot de passe lié à l\'ID utilisateur ').$_SESSION['idUser'].' bien réinitialisé';
+        $warning_message=urlencode('New password linked to user ID ').$_SESSION['idUser'].' well reseted';
         $newPassword = password_hash($newPassword,PASSWORD_DEFAULT);
         resetPassword($_SESSION['idUser'],$newPassword);
         $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
         header($url);
     }else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -125,7 +125,7 @@ function listNonActivatedAccounts(){
         require('model/modelManager.php');
         $donnees = getNonActivatedAccounts();
        if(count($donnees)==0){
-           $listUsers = '<strong><p>Il n\'y a aucun compte à valider</p></strong>';
+           $listUsers = '<strong><p>There are no accounts to validate</p></strong>';
        }
         else{
         ob_start();
@@ -143,8 +143,8 @@ function listNonActivatedAccounts(){
                     <td>' . $elt['firstName'] . '</td>
                     <td>' . $elt['lastName'] . '</td>
                     <td>' . $elt['email'] . '</td>
-                    <td><a href="index.php?action=activateAccount&id_user=' . $elt['ID'] . '"><input type="button" value="Activer le compte"></a></td>
-                    <td><a href="index.php?action=deleteNonActivatedUser&id_user=' . $elt['ID'] . '"><input type="button" value="Supprimer le compte" onclick="return(confirm(\'Êtes vous sur de vouloir supprimer le compte ?\'))"></a></td>
+                    <td><a href="index.php?action=activateAccount&id_user=' . $elt['ID'] . '"><input type="button" value="Activate account"></a></td>
+                    <td><a href="index.php?action=deleteNonActivatedUser&id_user=' . $elt['ID'] . '"><input type="button" value="Delete account" onclick="return(confirm(\'Are you sure you want to delete the account ?\'))"></a></td>
 
                  </tr>';
         }
@@ -152,7 +152,7 @@ function listNonActivatedAccounts(){
     }
         require('view/managerListNonActivatedUsersView.php');
     }else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -164,7 +164,7 @@ function deleteNonActivatedUser($id){
         header('Location:index.php?action=listNonActivatedAccounts');
     }
     else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -176,20 +176,20 @@ function activateAccount(){
         require('controller/mail.php');
         activateUserAccount($id_user);
         $donnees = getUserInfos($id_user);
-        $subject="Votre compte Infinite Measures est activé !";
+        $subject="Your Infinite Measures account is activated !";
         $body="
-        Bonjour ".$donnees['Pseudo'].", <br>
-        Votre compte Infinite Measures est enfin activé ! <br>
-        Rendez vous sur le site Infinite Measures pour accéder à votre espace personnel.
+        Hello ".$donnees['Pseudo'].", <br>
+        Your Infinite Measures account is finally activated! <br>
+        Go to the Infinite Measures website to access your personal space.
         <br>
         <br>
-        cordialement,<br>
-        L'équipe Infinite Measures";
+        cordially,<br>
+        The Infinite Measures team";
         sendMail($donnees['Mail'],$subject,$body);
         header('Location:index.php?action=listNonActivatedAccounts');
 
     }else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -200,11 +200,11 @@ function makeManager(){
         $userInfos=getUserInfos($_SESSION['idUser']);
         $userConnectionInfos=getUserConnectionInfos($_SESSION['idUser']);
         addManager($userInfos['Nom'],$userInfos['Prénom'],$userInfos['Mail'],$userConnectionInfos['password'],$userInfos['Pays']);
-        $warning_message=urlencode('Compte manager créé avec succès');
+        $warning_message=urlencode('Manager account created successfully');
         $url = 'Location:index.php?action=printUsers&message=' . $warning_message;
         header($url);
     }else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -214,18 +214,18 @@ function manageFAQ(){
         require('model/modelManager.php');
         $donnees = getFAQ();
         if (count($donnees) == 0) {
-            $FAQ = '<strong><p>Il y a aucune question dans la FAQ</p></strong>';
+            $FAQ = '<strong><p>There are no questions in the FAQ </p></strong>';
         } else {
             ob_start();
             echo '<tr>                 
                     <th>Question</th>
-                    <th>Reponse</th>
+                    <th>Response</th>
                 </tr>';
             foreach ($donnees as $elt) {
                 echo '<tr>
                     <td>' . $elt['question'] . '</td> 
                     <td>' . $elt['response'] . '</td>                   
-                    <td><a href="index.php?action=deleteQuestion&id_question=' . $elt['id'] . '"><input type="button" value="Supprimer la question"></a></td>                 
+                    <td><a href="index.php?action=deleteQuestion&id_question=' . $elt['id'] . '"><input type="button" value="Delete question"></a></td>                 
                  </tr>';
             }
         }
@@ -234,7 +234,7 @@ function manageFAQ(){
 
     }
     else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -256,7 +256,7 @@ function managerChatChoice(){
         require('model/modelManager.php');
         $donnees = getActiveChats();
         if(count($donnees)==0){
-            $userChatList = '<strong><p>Il n\'y a aucun chat actif</p></strong>';
+            $userChatList = '<strong><p>There are no active cats</p></strong>';
         }
         else{
             ob_start();
@@ -270,7 +270,7 @@ function managerChatChoice(){
                     <td>' . $elt['ID'] . '</td> 
                     <td>' . $elt['pseudo'] . '</td> 
                     <td>' . $elt['email'] . '</td>                 
-                    <td><a href="index.php?action=goToChat&id_user=' . $elt['ID'] . '"><input type="button" value="Voir le chat"></a></td>                 
+                    <td><a href="index.php?action=goToChat&id_user=' . $elt['ID'] . '"><input type="button" value="See the chat"></a></td>                 
                  </tr>';
             }
             $userChatList = ob_get_clean();
@@ -278,7 +278,7 @@ function managerChatChoice(){
         require('view/managerChatChoice.php');
     }
     else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -300,7 +300,7 @@ function goToChat($id_user){
         require('view/managerChatView.php');
     }
     else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -313,7 +313,7 @@ function newManagerMessage(){
         header($url);
     }
     else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -325,7 +325,7 @@ function deleteMessages(){
         header('Location:index.php?action=managerChatChoice');
     }
     else{
-        $warning_message = 'Reconnectez vous';
+        $warning_message = 'Reconnect';
         require('view/managerConnectView.php');
     }
 }
@@ -344,7 +344,7 @@ function numberOfVisitors(){
         require('view/managerVisitorsDatasView.php');
  }
 else{
-    $warning_message = 'Reconnectez vous';
+    $warning_message = 'Reconnect';
     require('view/managerConnectView.php');
 }
 }

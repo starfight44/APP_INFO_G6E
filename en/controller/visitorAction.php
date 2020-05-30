@@ -76,6 +76,8 @@ function connect(){
             require('model/modelUser.php');
 
             $donnees = getUserConnectionInfos($_POST['pseudo']);
+            setcookie('pseudo',$donnees['pseudo'],time()+604800);
+
             if (isset($donnees['pseudo']) AND password_verify($_POST['password'], $donnees['password'])) {
                 if(isset($donnees['active_account']) AND $donnees['active_account']==1){
                     $_SESSION['ID'] = $donnees['ID'];

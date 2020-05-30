@@ -295,6 +295,7 @@
         function validateForm() {
             var msg;
             var password = document.forms["register"]["password"].value;
+            var confirmPassword = document.forms["register"]["confirmPassword"].value;
             if (!password.match( /[0-9]/g) ||
                 !password.match( /[A-Z]/g) ||
                 !password.match(/[a-z]/g) ||
@@ -303,6 +304,12 @@
                 msg = "Password too weak, it must contain 1 uppercase character, 1 lowercase character, 1 digit, 1 special character and a minimum of 5 characters.";
                 document.getElementById("warning").innerHTML= msg;
                 document.register.password.focus() ;
+                return false;
+            }
+            else if (password != confirmPassword){
+                msg = "Mistake in confirm password";
+                document.getElementById("warning").innerHTML= msg;
+                document.register.confirmPassword.focus() ;
                 return false;
             }
         }

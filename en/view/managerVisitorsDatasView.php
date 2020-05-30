@@ -1,7 +1,7 @@
 <?php ob_start();?>
 
 <section>
-    <h2>Données du site</h2>
+    <h2>Site datas</h2>
     <article>
         <div class="datas">
         <div id="diagram">
@@ -27,9 +27,9 @@
 
         // The data for our dataset
         data: {
-            labels: ['Jour -6', 'Jour -5', 'Jour -4', 'Jour -3', 'Avant-hier', 'Hier', 'Aujourd\'hui'],
+            labels: ['Day -6', 'Day -5', 'Day -4', 'Day -3', 'Before yesterday', 'yesterday', 'Today'],
             datasets: [{
-                label: 'Nombre de visiteurs par jours',
+                label: 'Number of visitors per day',
                 backgroundColor: 'rgb(167, 200, 232)',
                 borderColor: 'rgb(167, 200, 232)',
                 data: [<?= $nbOfLogPerDay[6] ?>,
@@ -47,7 +47,7 @@
             responsive: true,
             title :{
                 display : true,
-                text : 'Nombre de visiteurs sur 6 jours'
+                text : 'Number of visitors on 6 days'
             }
         }
     });
@@ -61,7 +61,7 @@
         labels: "Proportion",
         // The data for our dataset
         data: {
-            labels: ['Femme', 'Homme',],
+            labels: ['Women', 'Man',],
             datasets: [{
                 data: [<?= $womenProportion ?>,
                     <?= $menProportion ?>],
@@ -76,7 +76,7 @@
             responsive: true,
             title :{
                 display : true,
-                text : 'Proportion des Femmes et des Hommes dans les utilisateurs'
+                text : 'Proportion of Women and Men in users'
             }
         }
     });</script>

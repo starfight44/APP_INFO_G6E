@@ -7,7 +7,7 @@
             <h1>Connexion</h1>
 
             <label><b>Nom d'utilisateur</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="pseudo" required>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="pseudo" value="<?php if(isset($_COOKIE['pseudo'])){echo $_COOKIE['pseudo'];} ?>" required>
 
 
             <label><b>Mot de passe</b></label>

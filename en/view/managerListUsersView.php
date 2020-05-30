@@ -1,26 +1,26 @@
 <?php ob_start(); ?>
 <section>
-    <h3>liste des utilisateurs actifs</h3>
+    <h3>list of active users</h3>
 
     <article>
         <form action="index.php?action=searchUser" method="POST">
-            <input type="text" placeholder="pseudo utilisateur" name="pseudo" required>
-            <input type="submit" id='submit' value='Rechercher' >
+            <input type="text" placeholder="user pseudo" name="pseudo" required>
+            <input type="submit" id='submit' value='Search' >
         </form>
         <?php if(isset($_GET['message'])){ ?> <p class="warning"> <?php echo $_GET['message'];?></p> <?php ;} ?>
         <div id ="membres">
             <table>
                 <tr>
-                    <th>ID</th>
-                    <th>Pseudo</th>
-                    <th>Prénom</th>
-                    <th>Nom</th>
-                    <th>Email</th>
-                    <th>Taille</th>
-                    <th>Poids</th>
-                    <th>Sexe</th>
-                    <th>Pays</th>
-                    <th>Date d'inscritpion</th>
+                    <th> ID </th>
+                    <th> Nickname </th>
+                    <th> First name </th>
+                    <th> Name </th>
+                    <th> Email </th>
+                    <th> Size </th>
+                    <th> Weight </th>
+                    <th> Sex </th>
+                    <th> Country </th>
+                    <th> Registration date </th>
                 </tr>
 
                 <?= $listUsers ?>

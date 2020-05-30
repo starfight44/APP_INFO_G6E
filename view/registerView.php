@@ -294,7 +294,9 @@
     <script type="text/javascript">
         function validateForm() {
             var msg;
+
             var password = document.forms["register"]["password"].value;
+            var confirmPassword = document.forms["register"]["confirmPassword"].value;
             if (!password.match( /[0-9]/g) ||
                 !password.match( /[A-Z]/g) ||
                 !password.match(/[a-z]/g) ||
@@ -303,6 +305,12 @@
                 msg = "Mot de passe trop faible, il doit contenir 1 caractère majuscule, 1 caractère minuscule, 1 chiffre,1 caractère spécial et un minimum de 5 caractères.";
                 document.getElementById("warning").innerHTML= msg;
                 document.register.password.focus() ;
+                return false;
+            }
+            else if (password != confirmPassword){
+                msg = "Erreur dans confirmation du mot de passe";
+                document.getElementById("warning").innerHTML= msg;
+                document.register.confirmPassword.focus() ;
                 return false;
             }
         }
