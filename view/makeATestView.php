@@ -3,7 +3,7 @@ ob_start(); ?>
 
     <section><h2>Faire un test :</h2></section>
     <section>
-            <p align="center" class="warning"><strong>INSTRUCTIONS :</strong> cliquez sur un test pour le supprimer<br>Ajoutez les tests dans l'ordre dans lesquels vous voulez les executer</p>
+            <p align="center" class="warning"><strong>INSTRUCTIONS :</strong> Ajoutez jusqu'à 5 tests dans la liste ci dessous, cliquez sur un test pour le supprimer<br>Ajustez les différents capteurs sur votre corps avant d'éxecuter le test</p>
             <br><br>
         <div id="addTest">
             <form action="index.php?action=addTest" method="POST">
