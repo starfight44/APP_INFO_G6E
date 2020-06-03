@@ -1,7 +1,7 @@
 <?php
 ob_start(); ?>
 
-    <section><h2>Make a test :</h2></section>
+    <section><h2>Make a test</h2></section>
     <section>
             <p align="center" class="warning"><strong>INSTRUCTIONS :</strong> Add up to 5 tests in the list below, click on a test to delete it <br> Adjust the different sensors on your body before running the test</p>
             <br><br>
